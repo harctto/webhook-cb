@@ -13,6 +13,12 @@ const lineConfig = {
 
 const client = new line.Client(lineConfig)
 
+const LINE_MESSAGING_API = 'https://api.line.me/v2/bot/message'
+const LINE_HEADER = {
+  'Content-Type': 'application/json',
+  Authorization: `Bearer ${lineConfig.channelAccessToken}`,
+}
+
 // [
 //     {
 //       type: 'message',
@@ -75,6 +81,29 @@ const characters = async () => {
   }
 }
 
+const reply = async (bodyResponse, message) => {
+  try {
+    const response = await axios({
+      method: 'post',
+      url: `${LINE_MESSAGING_API}/reply`,
+      data: {
+        replyToken: bodyResponse.events[0].replyToken,
+        messages: [
+          {
+            type: 'flex',
+            altText: message,
+            contents: message,
+          },
+        ],
+      },
+      headers: LINE_HEADER,
+    })
+    return response
+  } catch (error) {
+    return null
+  }
+}
+
 /* test */
 const mock = undefined
 characters()
@@ -93,12 +122,9 @@ app.post('/webhook', line.middleware(lineConfig), async (req, res) => {
 })
 
 const handleEvent = async (event) => {
-  if (event.message.text === 'Characters') {
+  if (event.message.text === 'characters') {
     await characters()
-    client.replyMessage(event.replyToken, {
-      type: 'carousel',
-      contents: flexMsgCharacterElements,
-    })
+    reply(event, flexMsgCharacterElements)
   }
 }
 
