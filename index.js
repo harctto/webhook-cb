@@ -49,7 +49,7 @@ const handleEvent = async (event) => {
     else if (artifacts.some((item) => item.id === event.message.text)) {
       const { name } = artifacts.find((item) => item.id === event.message.text)
       const { data } = await getArtifactDetail(name)
-      await replyFlexMsg(event, artifactsDetails(name))
+      await replyFlexMsg(event, artifactsDetails(name, data.name))
       //เพิ่ม emoji
       await replyMsg(
         event,
