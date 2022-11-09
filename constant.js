@@ -14,9 +14,14 @@ const characters = [
     "test"
 ]
 
+const artifacts = [
+    "ฉันหา Artifact ทั้งหมดมาให้คุณนักเดินทางแล้วค่ะ\n A1 - Adventurer\nA2 - Archaic Petra\nA3 - Berserker\nA3 - Blizzard Strayer\nA4 - Bloodstained Chivalry\nA5 - Brave Heart\nA6 - Crimson Witch of Flames\nA7 - Deepwood Memories\nA8 - Defender's Will\nA9 - Emblem of Severed Fate\nA10 - \n\nคุณนักเดินทางสามารถดูข้อมูล Artifact ได้โดยการพิมพ์ A ตามด้วยเลขได้เลยค่ะ เช่น A1 จะโชว์ข้อมูล Artifact Adventurer เป็นต้น"
+]
+
 module.exports = {
     recieveHello,
     responseHello,
+    artifacts,
     noAnswer,
     characters
 }

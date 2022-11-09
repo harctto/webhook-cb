@@ -1,18 +1,10 @@
 const line = require('@line/bot-sdk')
 const express = require('express')
 const app = express()
-const { 
-  recieveHello, 
-  responseHello, 
-  noAnswer 
-} = require('./constant')
+const { recieveHello, responseHello, noAnswer } = require('./constant')
 const { weapons } = require('./optionsCard')
-const { 
-  replyFlexMsg, 
-  LINE_CONFIG, 
-  randomWord, 
-  replyMsg 
-} = require('./helper')
+const { replyFlexMsg, LINE_CONFIG, randomWord, replyMsg } = require('./helper')
+const { getArtifact } = require('./handle_api')
 
 app.post('/webhook', line.middleware(LINE_CONFIG), async (req, res) => {
   try {
@@ -26,14 +18,24 @@ app.post('/webhook', line.middleware(LINE_CONFIG), async (req, res) => {
 })
 
 const handleEvent = async (event) => {
-  if (recieveHello.includes(event.message.text)) {
-    replyMsg(event, randomWord(responseHello))
-  }
-  if (event.message.text === 'weapons') {
-    replyFlexMsg(event, weapons)
-  }
-  else {
-    replyMsg(event, randomWord(noAnswer))
+  if (event.message.text) {
+    //greeting
+    if (recieveHello.includes(event.message.text)) {
+      replyMsg(event, randomWord(responseHello))
+    }
+    //weapons
+    else if (event.message.text === 'weapons') {
+      replyFlexMsg(event, weapons)
+    }
+    //artifacts
+    else if (event.message.text === 'artifacts') {
+      const { data } = await getArtifact()
+      replyMsg(event, data)
+    }
+    //no-text
+    else {
+      replyMsg(event, randomWord(noAnswer))
+    }
   }
 }
 
