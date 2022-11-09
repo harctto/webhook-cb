@@ -20,7 +20,7 @@ const randomWord = (items) => {
   return items[Math.floor(Math.random() * items.length)]
 }
 
-const replyFlexMsg = async (event, message) => {
+const replyFlexMsg = async (event, message, altText) => {
   try {
     const response = await axios({
       method: 'post',
@@ -30,7 +30,7 @@ const replyFlexMsg = async (event, message) => {
         messages: [
           {
             type: 'flex',
-            altText: event.message.text,
+            altText: altText,
             contents: message,
           },
         ],

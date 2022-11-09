@@ -1,7 +1,12 @@
 const line = require('@line/bot-sdk')
 const express = require('express')
 const app = express()
-const { recieveHello, responseHello, noAnswer, artifacts } = require('./constant')
+const {
+  recieveHello,
+  responseHello,
+  noAnswer,
+  artifacts,
+} = require('./constant')
 const { elements, weapons, artifactsDetails } = require('./optionsCard')
 const { replyFlexMsg, LINE_CONFIG, randomWord, replyMsg } = require('./helper')
 const { getArtifact, getArtifactDetail } = require('./handle_api')
@@ -25,29 +30,36 @@ const handleEvent = async (event) => {
     }
     //elements
     else if (event.message.text === 'elements') {
-      replyFlexMsg(event, elements)
+      await replyMsg(event, 'เลือกธาตุได้เลย')
+      await replyFlexMsg(event, elements, 'เลือกธาตุได้เลย')
     }
     //weapons
     else if (event.message.text === 'weapons') {
-      replyFlexMsg(event, weapons)
+      await replyMsg(event, 'เลือกประเภทของอาวุธได้เลย')
+      await replyFlexMsg(event, weapons, 'เลือกประเภทของอาวุธได้เลย')
     }
+    //weapons list
+    
     //artifacts
     else if (event.message.text === 'artifacts') {
       const { data } = await getArtifact()
       replyMsg(event, data)
     }
     //artifacts list
-    else if (artifacts.some(item => item.id === event.message.text)) {
-      const { name } = artifacts.find(item => item.id === event.message.text)
+    else if (artifacts.some((item) => item.id === event.message.text)) {
+      const { name } = artifacts.find((item) => item.id === event.message.text)
       const { data } = await getArtifactDetail(name)
       await replyFlexMsg(event, artifactsDetails(name))
-      await replyMsg(event, `Artifact ที่คุณนักเดินทางขอ ชื่อ ${data.name}
-        ซึ่งมีระดับความหายากมากที่สุด ${data.max_rarity} ดาว
-        เมื่อใส่เซ็ต 2 ชิ้นจะมีผลดังนี้ :
-        ${data["2-piece_bonus"]}
-        เมื่อใส่เซ็ต 4 ชิ้นจะมีผลดังนี้ :
-        ${data["4-piece_bonus"]}
-      `)
+      await replyMsg(
+        event,
+        `Artifact ที่คุณนักเดินทางขอ ชื่อ ${data.name}
+ซึ่งมีระดับความหายากมากที่สุด ${data.max_rarity} ดาว
+เมื่อใส่เซ็ต 2 ชิ้นจะมีผลดังนี้ :
+${data['2-piece_bonus']}
+เมื่อใส่เซ็ต 4 ชิ้นจะมีผลดังนี้ :
+${data['4-piece_bonus']}
+      `,
+      )
     }
     //no-text
     else {
