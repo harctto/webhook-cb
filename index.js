@@ -40,7 +40,7 @@ const handleEvent = async (event) => {
     else if (artifacts.some(item => item.id === event.message.text)) {
       const { name } = artifacts.find(item => item.id === event.message.text)
       const { data } = await getArtifactDetail(name)
-      await replyFlexMsg(event, artifactsDetails(data.name))
+      await replyFlexMsg(event, artifactsDetails(name))
       await replyMsg(event, `Artifact ที่คุณนักเดินทางขอ ชื่อ ${data.name}
         ซึ่งมีระดับความหายากมากที่สุด ${data.max_rarity} ดาว
         เมื่อใส่เซ็ต 2 ชิ้นจะมีผลดังนี้ :
