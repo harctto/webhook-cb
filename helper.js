@@ -45,6 +45,7 @@ const replyFlexMsg = async (event, message) => {
 
 const replyMsg = async (event, message) => {
   try {
+    console.log(event)
     const response = await axios({
       method: 'post',
       url: `${LINE_MESSAGING_API}/reply  `,

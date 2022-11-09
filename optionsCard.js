@@ -1,519 +1,511 @@
 const elements = {
-    type: 'carousel',
-    contents: [
-        {
-            type: 'bubble',
-            size: 'micro',
-            body: {
-              type: 'box',
-              layout: 'vertical',
-              contents: [
-                {
-                  type: 'image',
-                  url:
-                    'https://api.genshin.dev/elements/anemo/icon',
-                  size: 'full',
-                  aspectMode: 'cover',
-                  aspectRatio: '1:1',
-                  gravity: 'center',
-                },
-                {
-                  type: 'box',
-                  layout: 'vertical',
-                  contents: [],
-                  position: 'absolute',
-                  background: {
-                    type: 'linearGradient',
-                    angle: '0deg',
-                    endColor: '#00000000',
-                    startColor: '#00000099',
-                  },
-                  width: '100%',
-                  height: '40%',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                },
-                {
-                  type: 'box',
-                  layout: 'horizontal',
-                  contents: [
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      contents: [
-                        {
-                          type: 'box',
-                          layout: 'horizontal',
-                          contents: [
-                            {
-                              type: 'text',
-                              text: 'Anemo',
-                              size: 'xl',
-                              color: '#ffffff',
-                              decoration: 'none',
-                            },
-                          ],
-                        },
-                      ],
-                      spacing: 'xs',
-                    },
-                  ],
-                  position: 'absolute',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                  paddingAll: '20px',
-                },
-              ],
-              paddingAll: '0px',
-            },
-            action: {
-              type: 'message',
-              label: 'action',
-              text: 'Anemo',
-            },
+  type: 'carousel',
+  contents: [
+    {
+      type: 'bubble',
+      size: 'micro',
+      body: {
+        type: 'box',
+        layout: 'vertical',
+        contents: [
+          {
+            type: 'image',
+            url: 'https://api.genshin.dev/elements/anemo/icon',
+            size: 'full',
+            aspectMode: 'cover',
+            aspectRatio: '1:1',
+            gravity: 'center',
           },
           {
-            type: 'bubble',
-            size: 'micro',
-            body: {
-              type: 'box',
-              layout: 'vertical',
-              contents: [
-                {
-                  type: 'image',
-                  url:
-                    'https://api.genshin.dev/elements/cryo/icon',
-                  size: 'full',
-                  aspectMode: 'cover',
-                  aspectRatio: '1:1',
-                  gravity: 'center',
-                },
-                {
-                  type: 'box',
-                  layout: 'vertical',
-                  contents: [],
-                  position: 'absolute',
-                  background: {
-                    type: 'linearGradient',
-                    angle: '0deg',
-                    endColor: '#00000000',
-                    startColor: '#00000099',
-                  },
-                  width: '100%',
-                  height: '40%',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                },
-                {
-                  type: 'box',
-                  layout: 'horizontal',
-                  contents: [
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      contents: [
-                        {
-                          type: 'box',
-                          layout: 'horizontal',
-                          contents: [
-                            {
-                              type: 'text',
-                              text: 'Cryo',
-                              size: 'xl',
-                              color: '#ffffff',
-                              decoration: 'none',
-                            },
-                          ],
-                        },
-                      ],
-                      spacing: 'xs',
-                    },
-                  ],
-                  position: 'absolute',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                  paddingAll: '20px',
-                },
-              ],
-              paddingAll: '0px',
+            type: 'box',
+            layout: 'vertical',
+            contents: [],
+            position: 'absolute',
+            background: {
+              type: 'linearGradient',
+              angle: '0deg',
+              endColor: '#00000000',
+              startColor: '#00000099',
             },
-            action: {
-              type: 'message',
-              label: 'action',
-              text: 'Cryo',
-            },
+            width: '100%',
+            height: '40%',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
           },
           {
-            type: 'bubble',
-            size: 'micro',
-            body: {
-              type: 'box',
-              layout: 'vertical',
-              contents: [
-                {
-                  type: 'image',
-                  url:
-                    'https://api.genshin.dev/elements/dendro/icon',
-                  size: 'full',
-                  aspectMode: 'cover',
-                  aspectRatio: '1:1',
-                  gravity: 'center',
-                },
-                {
-                  type: 'box',
-                  layout: 'vertical',
-                  contents: [],
-                  position: 'absolute',
-                  background: {
-                    type: 'linearGradient',
-                    angle: '0deg',
-                    endColor: '#00000000',
-                    startColor: '#00000099',
+            type: 'box',
+            layout: 'horizontal',
+            contents: [
+              {
+                type: 'box',
+                layout: 'vertical',
+                contents: [
+                  {
+                    type: 'box',
+                    layout: 'horizontal',
+                    contents: [
+                      {
+                        type: 'text',
+                        text: 'Anemo',
+                        size: 'xl',
+                        color: '#ffffff',
+                        decoration: 'none',
+                      },
+                    ],
                   },
-                  width: '100%',
-                  height: '40%',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                },
-                {
-                  type: 'box',
-                  layout: 'horizontal',
-                  contents: [
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      contents: [
-                        {
-                          type: 'box',
-                          layout: 'horizontal',
-                          contents: [
-                            {
-                              type: 'text',
-                              text: 'Dendro',
-                              size: 'xl',
-                              color: '#ffffff',
-                              decoration: 'none',
-                            },
-                          ],
-                        },
-                      ],
-                      spacing: 'xs',
-                    },
-                  ],
-                  position: 'absolute',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                  paddingAll: '20px',
-                },
-              ],
-              paddingAll: '0px',
-            },
-            action: {
-              type: 'message',
-              label: 'action',
-              text: 'Dendro',
-            },
+                ],
+                spacing: 'xs',
+              },
+            ],
+            position: 'absolute',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+            paddingAll: '20px',
+          },
+        ],
+        paddingAll: '0px',
+      },
+      action: {
+        type: 'message',
+        label: 'action',
+        text: 'anemo',
+      },
+    },
+    {
+      type: 'bubble',
+      size: 'micro',
+      body: {
+        type: 'box',
+        layout: 'vertical',
+        contents: [
+          {
+            type: 'image',
+            url: 'https://api.genshin.dev/elements/cryo/icon',
+            size: 'full',
+            aspectMode: 'cover',
+            aspectRatio: '1:1',
+            gravity: 'center',
           },
           {
-            type: 'bubble',
-            size: 'micro',
-            body: {
-              type: 'box',
-              layout: 'vertical',
-              contents: [
-                {
-                  type: 'image',
-                  url:
-                    'https://api.genshin.dev/elements/dendro/icon',
-                  size: 'full',
-                  aspectMode: 'cover',
-                  aspectRatio: '1:1',
-                  gravity: 'center',
-                },
-                {
-                  type: 'box',
-                  layout: 'vertical',
-                  contents: [],
-                  position: 'absolute',
-                  background: {
-                    type: 'linearGradient',
-                    angle: '0deg',
-                    endColor: '#00000000',
-                    startColor: '#00000099',
-                  },
-                  width: '100%',
-                  height: '40%',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                },
-                {
-                  type: 'box',
-                  layout: 'horizontal',
-                  contents: [
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      contents: [
-                        {
-                          type: 'box',
-                          layout: 'horizontal',
-                          contents: [
-                            {
-                              type: 'text',
-                              text: 'Dendro',
-                              size: 'xl',
-                              color: '#ffffff',
-                              decoration: 'none',
-                            },
-                          ],
-                        },
-                      ],
-                      spacing: 'xs',
-                    },
-                  ],
-                  position: 'absolute',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                  paddingAll: '20px',
-                },
-              ],
-              paddingAll: '0px',
+            type: 'box',
+            layout: 'vertical',
+            contents: [],
+            position: 'absolute',
+            background: {
+              type: 'linearGradient',
+              angle: '0deg',
+              endColor: '#00000000',
+              startColor: '#00000099',
             },
-            action: {
-              type: 'message',
-              label: 'action',
-              text: 'Dendro',
-            },
+            width: '100%',
+            height: '40%',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
           },
           {
-            type: 'bubble',
-            size: 'micro',
-            body: {
-              type: 'box',
-              layout: 'vertical',
-              contents: [
-                {
-                  type: 'image',
-                  url:
-                    'https://api.genshin.dev/elements/dendro/icon',
-                  size: 'full',
-                  aspectMode: 'cover',
-                  aspectRatio: '1:1',
-                  gravity: 'center',
-                },
-                {
-                  type: 'box',
-                  layout: 'vertical',
-                  contents: [],
-                  position: 'absolute',
-                  background: {
-                    type: 'linearGradient',
-                    angle: '0deg',
-                    endColor: '#00000000',
-                    startColor: '#00000099',
+            type: 'box',
+            layout: 'horizontal',
+            contents: [
+              {
+                type: 'box',
+                layout: 'vertical',
+                contents: [
+                  {
+                    type: 'box',
+                    layout: 'horizontal',
+                    contents: [
+                      {
+                        type: 'text',
+                        text: 'Cryo',
+                        size: 'xl',
+                        color: '#ffffff',
+                        decoration: 'none',
+                      },
+                    ],
                   },
-                  width: '100%',
-                  height: '40%',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                },
-                {
-                  type: 'box',
-                  layout: 'horizontal',
-                  contents: [
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      contents: [
-                        {
-                          type: 'box',
-                          layout: 'horizontal',
-                          contents: [
-                            {
-                              type: 'text',
-                              text: 'Dendro',
-                              size: 'xl',
-                              color: '#ffffff',
-                              decoration: 'none',
-                            },
-                          ],
-                        },
-                      ],
-                      spacing: 'xs',
-                    },
-                  ],
-                  position: 'absolute',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                  paddingAll: '20px',
-                },
-              ],
-              paddingAll: '0px',
-            },
-            action: {
-              type: 'message',
-              label: 'action',
-              text: 'Dendro',
-            },
+                ],
+                spacing: 'xs',
+              },
+            ],
+            position: 'absolute',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+            paddingAll: '20px',
+          },
+        ],
+        paddingAll: '0px',
+      },
+      action: {
+        type: 'message',
+        label: 'action',
+        text: 'cryo',
+      },
+    },
+    {
+      type: 'bubble',
+      size: 'micro',
+      body: {
+        type: 'box',
+        layout: 'vertical',
+        contents: [
+          {
+            type: 'image',
+            url: 'https://api.genshin.dev/elements/dendro/icon',
+            size: 'full',
+            aspectMode: 'cover',
+            aspectRatio: '1:1',
+            gravity: 'center',
           },
           {
-            type: 'bubble',
-            size: 'micro',
-            body: {
-              type: 'box',
-              layout: 'vertical',
-              contents: [
-                {
-                  type: 'image',
-                  url:
-                    'https://api.genshin.dev/elements/dendro/icon',
-                  size: 'full',
-                  aspectMode: 'cover',
-                  aspectRatio: '1:1',
-                  gravity: 'center',
-                },
-                {
-                  type: 'box',
-                  layout: 'vertical',
-                  contents: [],
-                  position: 'absolute',
-                  background: {
-                    type: 'linearGradient',
-                    angle: '0deg',
-                    endColor: '#00000000',
-                    startColor: '#00000099',
-                  },
-                  width: '100%',
-                  height: '40%',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                },
-                {
-                  type: 'box',
-                  layout: 'horizontal',
-                  contents: [
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      contents: [
-                        {
-                          type: 'box',
-                          layout: 'horizontal',
-                          contents: [
-                            {
-                              type: 'text',
-                              text: 'Dendro',
-                              size: 'xl',
-                              color: '#ffffff',
-                              decoration: 'none',
-                            },
-                          ],
-                        },
-                      ],
-                      spacing: 'xs',
-                    },
-                  ],
-                  position: 'absolute',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                  paddingAll: '20px',
-                },
-              ],
-              paddingAll: '0px',
+            type: 'box',
+            layout: 'vertical',
+            contents: [],
+            position: 'absolute',
+            background: {
+              type: 'linearGradient',
+              angle: '0deg',
+              endColor: '#00000000',
+              startColor: '#00000099',
             },
-            action: {
-              type: 'message',
-              label: 'action',
-              text: 'Dendro',
-            },
+            width: '100%',
+            height: '40%',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
           },
           {
-            type: 'bubble',
-            size: 'micro',
-            body: {
-              type: 'box',
-              layout: 'vertical',
-              contents: [
-                {
-                  type: 'image',
-                  url:
-                    'https://api.genshin.dev/elements/dendro/icon',
-                  size: 'full',
-                  aspectMode: 'cover',
-                  aspectRatio: '1:1',
-                  gravity: 'center',
-                },
-                {
-                  type: 'box',
-                  layout: 'vertical',
-                  contents: [],
-                  position: 'absolute',
-                  background: {
-                    type: 'linearGradient',
-                    angle: '0deg',
-                    endColor: '#00000000',
-                    startColor: '#00000099',
+            type: 'box',
+            layout: 'horizontal',
+            contents: [
+              {
+                type: 'box',
+                layout: 'vertical',
+                contents: [
+                  {
+                    type: 'box',
+                    layout: 'horizontal',
+                    contents: [
+                      {
+                        type: 'text',
+                        text: 'Dendro',
+                        size: 'xl',
+                        color: '#ffffff',
+                        decoration: 'none',
+                      },
+                    ],
                   },
-                  width: '100%',
-                  height: '40%',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                },
-                {
-                  type: 'box',
-                  layout: 'horizontal',
-                  contents: [
-                    {
-                      type: 'box',
-                      layout: 'vertical',
-                      contents: [
-                        {
-                          type: 'box',
-                          layout: 'horizontal',
-                          contents: [
-                            {
-                              type: 'text',
-                              text: 'Dendro',
-                              size: 'xl',
-                              color: '#ffffff',
-                              decoration: 'none',
-                            },
-                          ],
-                        },
-                      ],
-                      spacing: 'xs',
-                    },
-                  ],
-                  position: 'absolute',
-                  offsetBottom: '0px',
-                  offsetStart: '0px',
-                  offsetEnd: '0px',
-                  paddingAll: '20px',
-                },
-              ],
-              paddingAll: '0px',
-            },
-            action: {
-              type: 'message',
-              label: 'action',
-              text: 'Dendro',
-            },
+                ],
+                spacing: 'xs',
+              },
+            ],
+            position: 'absolute',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+            paddingAll: '20px',
           },
-          
-    ]
+        ],
+        paddingAll: '0px',
+      },
+      action: {
+        type: 'message',
+        label: 'action',
+        text: 'dendro',
+      },
+    },
+    {
+      type: 'bubble',
+      size: 'micro',
+      body: {
+        type: 'box',
+        layout: 'vertical',
+        contents: [
+          {
+            type: 'image',
+            url: 'https://api.genshin.dev/elements/electro/icon',
+            size: 'full',
+            aspectMode: 'cover',
+            aspectRatio: '1:1',
+            gravity: 'center',
+          },
+          {
+            type: 'box',
+            layout: 'vertical',
+            contents: [],
+            position: 'absolute',
+            background: {
+              type: 'linearGradient',
+              angle: '0deg',
+              endColor: '#00000000',
+              startColor: '#00000099',
+            },
+            width: '100%',
+            height: '40%',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+          },
+          {
+            type: 'box',
+            layout: 'horizontal',
+            contents: [
+              {
+                type: 'box',
+                layout: 'vertical',
+                contents: [
+                  {
+                    type: 'box',
+                    layout: 'horizontal',
+                    contents: [
+                      {
+                        type: 'text',
+                        text: 'Electro',
+                        size: 'xl',
+                        color: '#ffffff',
+                        decoration: 'none',
+                      },
+                    ],
+                  },
+                ],
+                spacing: 'xs',
+              },
+            ],
+            position: 'absolute',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+            paddingAll: '20px',
+          },
+        ],
+        paddingAll: '0px',
+      },
+      action: {
+        type: 'message',
+        label: 'action',
+        text: 'electro',
+      },
+    },
+    {
+      type: 'bubble',
+      size: 'micro',
+      body: {
+        type: 'box',
+        layout: 'vertical',
+        contents: [
+          {
+            type: 'image',
+            url: 'https://api.genshin.dev/elements/geo/icon',
+            size: 'full',
+            aspectMode: 'cover',
+            aspectRatio: '1:1',
+            gravity: 'center',
+          },
+          {
+            type: 'box',
+            layout: 'vertical',
+            contents: [],
+            position: 'absolute',
+            background: {
+              type: 'linearGradient',
+              angle: '0deg',
+              endColor: '#00000000',
+              startColor: '#00000099',
+            },
+            width: '100%',
+            height: '40%',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+          },
+          {
+            type: 'box',
+            layout: 'horizontal',
+            contents: [
+              {
+                type: 'box',
+                layout: 'vertical',
+                contents: [
+                  {
+                    type: 'box',
+                    layout: 'horizontal',
+                    contents: [
+                      {
+                        type: 'text',
+                        text: 'Geo',
+                        size: 'xl',
+                        color: '#ffffff',
+                        decoration: 'none',
+                      },
+                    ],
+                  },
+                ],
+                spacing: 'xs',
+              },
+            ],
+            position: 'absolute',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+            paddingAll: '20px',
+          },
+        ],
+        paddingAll: '0px',
+      },
+      action: {
+        type: 'message',
+        label: 'action',
+        text: 'Geo',
+      },
+    },
+    {
+      type: 'bubble',
+      size: 'micro',
+      body: {
+        type: 'box',
+        layout: 'vertical',
+        contents: [
+          {
+            type: 'image',
+            url: 'https://api.genshin.dev/elements/hydro/icon',
+            size: 'full',
+            aspectMode: 'cover',
+            aspectRatio: '1:1',
+            gravity: 'center',
+          },
+          {
+            type: 'box',
+            layout: 'vertical',
+            contents: [],
+            position: 'absolute',
+            background: {
+              type: 'linearGradient',
+              angle: '0deg',
+              endColor: '#00000000',
+              startColor: '#00000099',
+            },
+            width: '100%',
+            height: '40%',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+          },
+          {
+            type: 'box',
+            layout: 'horizontal',
+            contents: [
+              {
+                type: 'box',
+                layout: 'vertical',
+                contents: [
+                  {
+                    type: 'box',
+                    layout: 'horizontal',
+                    contents: [
+                      {
+                        type: 'text',
+                        text: 'Hydro',
+                        size: 'xl',
+                        color: '#ffffff',
+                        decoration: 'none',
+                      },
+                    ],
+                  },
+                ],
+                spacing: 'xs',
+              },
+            ],
+            position: 'absolute',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+            paddingAll: '20px',
+          },
+        ],
+        paddingAll: '0px',
+      },
+      action: {
+        type: 'message',
+        label: 'action',
+        text: 'Hydro',
+      },
+    },
+    {
+      type: 'bubble',
+      size: 'micro',
+      body: {
+        type: 'box',
+        layout: 'vertical',
+        contents: [
+          {
+            type: 'image',
+            url: 'https://api.genshin.dev/elements/pyro/icon',
+            size: 'full',
+            aspectMode: 'cover',
+            aspectRatio: '1:1',
+            gravity: 'center',
+          },
+          {
+            type: 'box',
+            layout: 'vertical',
+            contents: [],
+            position: 'absolute',
+            background: {
+              type: 'linearGradient',
+              angle: '0deg',
+              endColor: '#00000000',
+              startColor: '#00000099',
+            },
+            width: '100%',
+            height: '40%',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+          },
+          {
+            type: 'box',
+            layout: 'horizontal',
+            contents: [
+              {
+                type: 'box',
+                layout: 'vertical',
+                contents: [
+                  {
+                    type: 'box',
+                    layout: 'horizontal',
+                    contents: [
+                      {
+                        type: 'text',
+                        text: 'Pyro',
+                        size: 'xl',
+                        color: '#ffffff',
+                        decoration: 'none',
+                      },
+                    ],
+                  },
+                ],
+                spacing: 'xs',
+              },
+            ],
+            position: 'absolute',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+            paddingAll: '20px',
+          },
+        ],
+        paddingAll: '0px',
+      },
+      action: {
+        type: 'message',
+        label: 'action',
+        text: 'pyro',
+      },
+    },
+  ],
 }
 
 const weapons = {
@@ -883,478 +875,57 @@ const weapons = {
   ],
 }
 
-const artifacts = {
-  type: 'carousel',
-  contents: [
-    {
-      type: 'bubble',
-      body: {
-        type: 'box',
-        layout: 'vertical',
-        contents: [
-          {
-            type: 'image',
-            url: 'https://api.genshin.dev/artifacts/adventurer/flower-of-life',
-            size: 'full',
-            aspectMode: 'cover',
-            aspectRatio: '1:1',
-            gravity: 'center',
-          },
-          {
-            type: 'box',
-            layout: 'vertical',
-            contents: [],
-            position: 'absolute',
-            background: {
-              type: 'linearGradient',
-              angle: '0deg',
-              endColor: '#00000000',
-              startColor: '#00000099',
+const artifactsDetails = (name) => {
+  return {
+    type: 'bubble',
+    size: 'micro',
+    body: {
+      type: 'box',
+      layout: 'vertical',
+      contents: [
+        {
+          type: 'image',
+          url: `https://api.genshin.dev/artifacts/${name}/flower-of-life`,
+          size: 'full',
+          aspectMode: 'cover',
+          aspectRatio: '2:3',
+          gravity: 'top',
+        },
+        {
+          type: 'box',
+          layout: 'vertical',
+          contents: [
+            {
+              type: 'box',
+              layout: 'vertical',
+              contents: [
+                {
+                  type: 'text',
+                  text: name,
+                  size: 'sm',
+                  color: '#ffffff',
+                  weight: 'bold',
+                },
+              ],
             },
-            width: '100%',
-            height: '40%',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-          },
-          {
-            type: 'box',
-            layout: 'horizontal',
-            contents: [
-              {
-                type: 'box',
-                layout: 'vertical',
-                contents: [
-                  {
-                    type: 'box',
-                    layout: 'horizontal',
-                    contents: [
-                      {
-                        type: 'text',
-                        text: 'Adventurer',
-                        size: '3xl',
-                        color: '#ffffff',
-                      },
-                    ],
-                  },
-                ],
-                spacing: 'xs',
-              },
-            ],
-            position: 'absolute',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-            paddingAll: '20px',
-          },
-        ],
-        paddingAll: '0px',
-      },
-      action: {
-        type: 'message',
-        label: 'action',
-        text: 'bow',
-      },
+          ],
+          position: 'absolute',
+          offsetBottom: '0px',
+          offsetStart: '0px',
+          offsetEnd: '0px',
+          paddingAll: '10px',
+          paddingTop: '10px',
+          backgroundColor: '#ffffff22',
+        },
+      ],
+      paddingAll: '0px',
+      backgroundColor: '#122556',
     },
-    {
-      type: 'bubble',
-      body: {
-        type: 'box',
-        layout: 'vertical',
-        contents: [
-          {
-            type: 'image',
-            url: 'https://api.genshin.dev/artifacts/berserker/flower-of-life',
-            size: 'full',
-            aspectMode: 'cover',
-            aspectRatio: '1:1',
-            gravity: 'center',
-          },
-          {
-            type: 'box',
-            layout: 'vertical',
-            contents: [],
-            position: 'absolute',
-            background: {
-              type: 'linearGradient',
-              angle: '0deg',
-              endColor: '#00000000',
-              startColor: '#00000099',
-            },
-            width: '100%',
-            height: '40%',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-          },
-          {
-            type: 'box',
-            layout: 'horizontal',
-            contents: [
-              {
-                type: 'box',
-                layout: 'vertical',
-                contents: [
-                  {
-                    type: 'box',
-                    layout: 'horizontal',
-                    contents: [
-                      {
-                        type: 'text',
-                        text: 'Berserker',
-                        size: '3xl',
-                        color: '#ffffff',
-                      },
-                    ],
-                  },
-                ],
-                spacing: 'xs',
-              },
-            ],
-            position: 'absolute',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-            paddingAll: '20px',
-          },
-        ],
-        paddingAll: '0px',
-      },
-    },
-    {
-      type: 'bubble',
-      body: {
-        type: 'box',
-        layout: 'vertical',
-        contents: [
-          {
-            type: 'image',
-            url:
-              'https://api.genshin.dev/artifacts/blizzard-strayer/flower-of-life',
-            size: 'full',
-            aspectMode: 'cover',
-            aspectRatio: '1:1',
-            gravity: 'center',
-          },
-          {
-            type: 'box',
-            layout: 'vertical',
-            contents: [],
-            position: 'absolute',
-            background: {
-              type: 'linearGradient',
-              angle: '0deg',
-              endColor: '#00000000',
-              startColor: '#00000099',
-            },
-            width: '100%',
-            height: '40%',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-          },
-          {
-            type: 'box',
-            layout: 'horizontal',
-            contents: [
-              {
-                type: 'box',
-                layout: 'vertical',
-                contents: [
-                  {
-                    type: 'box',
-                    layout: 'horizontal',
-                    contents: [
-                      {
-                        type: 'text',
-                        text: 'Blizzard Strayer',
-                        size: '3xl',
-                        color: '#ffffff',
-                      },
-                    ],
-                  },
-                ],
-                spacing: 'xs',
-              },
-            ],
-            position: 'absolute',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-            paddingAll: '20px',
-          },
-        ],
-        paddingAll: '0px',
-      },
-    },
-    {
-      type: 'bubble',
-      body: {
-        type: 'box',
-        layout: 'vertical',
-        contents: [
-          {
-            type: 'image',
-            url:
-              'https://api.genshin.dev/artifacts/bloodstained-chivalry/flower-of-life',
-            size: 'full',
-            aspectMode: 'cover',
-            aspectRatio: '1:1',
-            gravity: 'center',
-          },
-          {
-            type: 'box',
-            layout: 'vertical',
-            contents: [],
-            position: 'absolute',
-            background: {
-              type: 'linearGradient',
-              angle: '0deg',
-              endColor: '#00000000',
-              startColor: '#00000099',
-            },
-            width: '100%',
-            height: '40%',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-          },
-          {
-            type: 'box',
-            layout: 'horizontal',
-            contents: [
-              {
-                type: 'box',
-                layout: 'vertical',
-                contents: [
-                  {
-                    type: 'box',
-                    layout: 'horizontal',
-                    contents: [
-                      {
-                        type: 'text',
-                        text: 'Bloodstained Chivalry',
-                        size: '3xl',
-                        color: '#ffffff',
-                      },
-                    ],
-                  },
-                ],
-                spacing: 'xs',
-              },
-            ],
-            position: 'absolute',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-            paddingAll: '20px',
-          },
-        ],
-        paddingAll: '0px',
-      },
-    },
-    {
-      type: 'bubble',
-      body: {
-        type: 'box',
-        layout: 'vertical',
-        contents: [
-          {
-            type: 'image',
-            url: 'https://api.genshin.dev/artifacts/brave-heart/flower-of-life',
-            size: 'full',
-            aspectMode: 'cover',
-            aspectRatio: '1:1',
-            gravity: 'center',
-          },
-          {
-            type: 'box',
-            layout: 'vertical',
-            contents: [],
-            position: 'absolute',
-            background: {
-              type: 'linearGradient',
-              angle: '0deg',
-              endColor: '#00000000',
-              startColor: '#00000099',
-            },
-            width: '100%',
-            height: '40%',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-          },
-          {
-            type: 'box',
-            layout: 'horizontal',
-            contents: [
-              {
-                type: 'box',
-                layout: 'vertical',
-                contents: [
-                  {
-                    type: 'box',
-                    layout: 'horizontal',
-                    contents: [
-                      {
-                        type: 'text',
-                        text: 'Brave Heart',
-                        size: '3xl',
-                        color: '#ffffff',
-                      },
-                    ],
-                  },
-                ],
-                spacing: 'xs',
-              },
-            ],
-            position: 'absolute',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-            paddingAll: '20px',
-          },
-        ],
-        paddingAll: '0px',
-      },
-    },
-    {
-      type: 'bubble',
-      body: {
-        type: 'box',
-        layout: 'vertical',
-        contents: [
-          {
-            type: 'image',
-            url:
-              'https://api.genshin.dev/artifacts/crimson-witch-of-flames/flower-of-life',
-            size: 'full',
-            aspectMode: 'cover',
-            aspectRatio: '1:1',
-            gravity: 'center',
-          },
-          {
-            type: 'box',
-            layout: 'vertical',
-            contents: [],
-            position: 'absolute',
-            background: {
-              type: 'linearGradient',
-              angle: '0deg',
-              endColor: '#00000000',
-              startColor: '#00000099',
-            },
-            width: '100%',
-            height: '40%',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-          },
-          {
-            type: 'box',
-            layout: 'horizontal',
-            contents: [
-              {
-                type: 'box',
-                layout: 'vertical',
-                contents: [
-                  {
-                    type: 'box',
-                    layout: 'horizontal',
-                    contents: [
-                      {
-                        type: 'text',
-                        text: 'Crimson Witch of Flames',
-                        size: '3xl',
-                        color: '#ffffff',
-                      },
-                    ],
-                  },
-                ],
-                spacing: 'xs',
-              },
-            ],
-            position: 'absolute',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-            paddingAll: '20px',
-          },
-        ],
-        paddingAll: '0px',
-      },
-    },
-    {
-      type: 'bubble',
-      body: {
-        type: 'box',
-        layout: 'vertical',
-        contents: [
-          {
-            type: 'image',
-            url:
-              'https://api.genshin.dev/artifacts/deepwood-memories/flower-of-life',
-            size: 'full',
-            aspectMode: 'cover',
-            aspectRatio: '1:1',
-            gravity: 'center',
-          },
-          {
-            type: 'box',
-            layout: 'vertical',
-            contents: [],
-            position: 'absolute',
-            background: {
-              type: 'linearGradient',
-              angle: '0deg',
-              endColor: '#00000000',
-              startColor: '#00000099',
-            },
-            width: '100%',
-            height: '40%',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-          },
-          {
-            type: 'box',
-            layout: 'horizontal',
-            contents: [
-              {
-                type: 'box',
-                layout: 'vertical',
-                contents: [
-                  {
-                    type: 'box',
-                    layout: 'horizontal',
-                    contents: [
-                      {
-                        type: 'text',
-                        text: 'Deepwood Memories',
-                        size: '3xl',
-                        color: '#ffffff',
-                      },
-                    ],
-                  },
-                ],
-                spacing: 'xs',
-              },
-            ],
-            position: 'absolute',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-            paddingAll: '20px',
-          },
-        ],
-        paddingAll: '0px',
-      },
-    },
-  ],
+  }
 }
 
 module.exports = {
   elements,
   weapons,
-  artifacts,
+  artifactsDetails
 }
