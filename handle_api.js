@@ -20,6 +20,7 @@ const getArtifact = async () => {
 
 const getArtifactDetail = async (name) => {
   try {
+      console.log(name)
     const res = await axios.get(`${env.API_URL}/artifacts/${name}`)
     return {
         status: true,

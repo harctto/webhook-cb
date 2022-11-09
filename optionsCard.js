@@ -875,7 +875,7 @@ const weapons = {
   ],
 }
 
-const artifactsDetails = (name, fullname) => {
+const artifactsDetails = ({name, fullname}) => {
   return {
     "type": "bubble",
     "size": "kilo",

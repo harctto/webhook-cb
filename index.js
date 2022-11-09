@@ -28,11 +28,14 @@ const handleEvent = async (event) => {
     if (recieveHello.includes(event.message.text)) {
       replyMsg(event, randomWord(responseHello))
     }
-    //elements
-    else if (event.message.text === 'elements') {
-      await replyMsg(event, 'เลือกธาตุได้เลย')
-      await replyFlexMsg(event, elements, 'เลือกธาตุได้เลย')
+    //characters
+    else if (event.message.text === 'characters') {
+      await replyMsg(event, 'เลือกธาตุตัวละครก่อนนะคะ')
+      await replyFlexMsg(event, elements, 'เลือกธาตุตัวละครก่อนนะคะ')
     }
+
+    //characters list
+
     //weapons
     else if (event.message.text === 'weapons') {
       await replyMsg(event, 'เลือกประเภทของอาวุธได้เลย')
@@ -49,8 +52,12 @@ const handleEvent = async (event) => {
     else if (artifacts.some((item) => item.id === event.message.text)) {
       const { name } = artifacts.find((item) => item.id === event.message.text)
       const { data } = await getArtifactDetail(name)
-      await replyFlexMsg(event, artifactsDetails(name, data.name))
-      //เพิ่ม emoji
+      const getDetail = artifactsDetails({ name: name, fullname: data.name })
+      await replyFlexMsg(
+        event,
+        getDetail,
+      )
+      //เพิ่ม emoji - ไม่
       await replyMsg(
         event,
         `Artifact ที่คุณนักเดินทางขอ ชื่อ ${data.name}
