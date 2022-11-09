@@ -1,5 +1,6 @@
 const line = require('@line/bot-sdk')
 const express = require('express')
+const app = express()
 const { 
   recieveHello, 
   responseHello, 
@@ -12,7 +13,6 @@ const {
   randomWord, 
   replyMsg 
 } = require('./helper')
-const app = express()
 
 app.post('/webhook', line.middleware(LINE_CONFIG), async (req, res) => {
   try {

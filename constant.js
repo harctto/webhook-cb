@@ -16,5 +16,7 @@ const characters = [
 
 module.exports = {
     recieveHello,
+    responseHello,
+    noAnswer,
     characters
 }

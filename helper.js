@@ -69,6 +69,7 @@ module.exports = {
   capitalizeFirstLetter,
   replyFlexMsg,
   replyMsg,
+  randomWord,
   LINE_CONFIG,
   LINE_HEADER,
   LINE_MESSAGING_API,
