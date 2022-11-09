@@ -26,6 +26,60 @@ const client = new line.Client(lineConfig)
 //     }
 //   ]
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
+const flexMsgCharacterElements = []
+
+const characters = async () => {
+  const getApi = await axios.get('https://api.genshin.dev/elements')
+  try {
+    const res = getApi
+    return await res.data.map((data) => {
+      flexMsgCharacterElements.push({
+        type: 'bubble',
+        size: 'micro',
+        hero: {
+          type: 'image',
+          url: `https://api.genshin.dev/elements/${data}/icon`,
+          aspectMode: 'cover',
+          aspectRatio: '1:1',
+          position: 'relative',
+          offsetTop: '10px',
+        },
+        body: {
+          type: 'box',
+          layout: 'vertical',
+          contents: [
+            {
+              type: 'text',
+              text: capitalizeFirstLetter(data),
+              weight: 'bold',
+              size: 'sm',
+              wrap: true,
+            },
+          ],
+          spacing: 'sm',
+          paddingAll: '15px',
+        },
+        action: {
+          type: 'message',
+          label: capitalizeFirstLetter(data),
+          text: capitalizeFirstLetter(data),
+        },
+      })
+    })
+  } catch {
+    return
+  }
+}
+
+/* test */
+const mock = undefined
+characters()
+/* test */
+
 app.post('/webhook', line.middleware(lineConfig), async (req, res) => {
   try {
     const events = req.body.events
@@ -38,27 +92,13 @@ app.post('/webhook', line.middleware(lineConfig), async (req, res) => {
   }
 })
 
-const characters = async (event) => {
-  const getApi = await axios.get('https://api.genshin.dev/characters')
-  try {
-    const res = getApi
-    console.log(res.data)
-    res.data
-      ? res.data.map((data) => {
-          return client.replyMessage(event.replyToken, {
-            type: 'text',
-            text: data,
-          })
-        })
-      : null
-  } catch {
-    return
-  }
-}
-
 const handleEvent = async (event) => {
-  if (event.message.text === "Characters") {
-    characters(event)
+  if (event.message.text === 'Characters') {
+    await characters()
+    client.replyMessage(event.replyToken, {
+      type: 'carousel',
+      contents: flexMsgCharacterElements,
+    })
   }
 }
 
