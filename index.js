@@ -56,6 +56,7 @@ const handleEvent = async (event) => {
       await replyFlexMsg(
         event,
         getDetail,
+        data.name
       )
       //เพิ่ม emoji - ไม่
       await replyMsg(
