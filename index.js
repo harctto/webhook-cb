@@ -28,7 +28,7 @@ const client = new line.Client(lineConfig)
 
 app.post('/webhook', line.middleware(lineConfig), async (req, res) => {
   try {
-    const events = mock
+    const events = req.body.events
     console.log('event ===>', events)
     return events.length > 0
       ? await events.map((item) => handleEvent(item))
@@ -38,14 +38,14 @@ app.post('/webhook', line.middleware(lineConfig), async (req, res) => {
   }
 })
 
-const characters = async () => {
+const characters = async (event) => {
   const getApi = await axios.get('https://api.genshin.dev/characters')
   try {
     const res = getApi
     console.log(res.data)
     res.data
       ? res.data.map((data) => {
-          return client.replyMessage(events.replyToken, {
+          return client.replyMessage(event.replyToken, {
             type: 'text',
             text: data,
           })
@@ -58,7 +58,7 @@ const characters = async () => {
 
 const handleEvent = async (event) => {
   if (event.message.text === "Characters") {
-    characters()
+    characters(event)
   }
 }
 
