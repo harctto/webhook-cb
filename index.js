@@ -17,7 +17,6 @@ app.post('/webhook', line.middleware(LINE_CONFIG), async (req, res) => {
   }
 })
 
-
 const handleEvent = async (event) => {
   if (event.message.text) {
     //greeting
@@ -41,13 +40,12 @@ const handleEvent = async (event) => {
     else if (artifacts.some(item => item.id === event.message.text)) {
       const { name } = artifacts.find(item => item.id === event.message.text)
       const { data } = await getArtifactDetail(name)
-      replyFlexMsg(event, artifactsDetails(data.name))
-      replyMsg(event, `
-        Artifact ที่คุณนักเดินทางขอ ชื่อ ${data.name}\n
-        ซึ่งมีระดับความหายากมากที่สุด ${data.max_rarity} ดาว\n
-        เมื่อใส่เซ็ต 2 ชิ้นจะมีผลดังนี้\n
-        ${data["2-piece_bonus"]}\n
-        เมื่อใส่เซ็ต 4 ชิ้นจะมีผลดังนี้\n
+      await replyFlexMsg(event, artifactsDetails(data.name))
+      await replyMsg(event, `Artifact ที่คุณนักเดินทางขอ ชื่อ ${data.name}
+        ซึ่งมีระดับความหายากมากที่สุด ${data.max_rarity} ดาว
+        เมื่อใส่เซ็ต 2 ชิ้นจะมีผลดังนี้ :
+        ${data["2-piece_bonus"]}
+        เมื่อใส่เซ็ต 4 ชิ้นจะมีผลดังนี้ :
         ${data["4-piece_bonus"]}
       `)
     }
