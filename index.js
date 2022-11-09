@@ -4,7 +4,7 @@ const app = express()
 const { recieveHello, responseHello, noAnswer, artifacts } = require('./constant')
 const { elements, weapons, artifactsDetails } = require('./optionsCard')
 const { replyFlexMsg, LINE_CONFIG, randomWord, replyMsg } = require('./helper')
-const { getArtifact } = require('./handle_api')
+const { getArtifact, getArtifactDetail } = require('./handle_api')
 
 app.post('/webhook', line.middleware(LINE_CONFIG), async (req, res) => {
   try {
@@ -59,5 +59,5 @@ const handleEvent = async (event) => {
 }
 
 app.listen(4000, () => {
-  console.log('listening 4000')
+  console.log('Server is ready')
 })

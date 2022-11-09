@@ -39,13 +39,12 @@ const replyFlexMsg = async (event, message) => {
     })
     return response
   } catch (error) {
-    return console.log(error)
+    return 
   }
 }
 
 const replyMsg = async (event, message) => {
   try {
-    console.log(event)
     const response = await axios({
       method: 'post',
       url: `${LINE_MESSAGING_API}/reply  `,
@@ -62,7 +61,7 @@ const replyMsg = async (event, message) => {
     })
     return response
   } catch (error) {
-    return console.log(error)
+    return
   }
 }
 

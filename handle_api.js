@@ -32,4 +32,5 @@ const getArtifactDetail = async (name) => {
 
 module.exports = {
   getArtifact,
+  getArtifactDetail
 }
