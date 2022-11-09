@@ -1,5 +1,5 @@
 {
-  "name": "Webhook Chatbot",
+  "name": "webhookchatbot",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -14,6 +14,6 @@
     "start": "nodemon index.js"
   },
   "engines": {
-    "node": ">=16.18.0"
+    "node": ">=16"
   }
 }
