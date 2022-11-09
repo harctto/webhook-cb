@@ -39,7 +39,7 @@ const handleEvent = async (event) => {
       await replyFlexMsg(event, weapons, 'เลือกประเภทของอาวุธได้เลย')
     }
     //weapons list
-    
+
     //artifacts
     else if (event.message.text === 'artifacts') {
       const { data } = await getArtifact()
@@ -50,6 +50,7 @@ const handleEvent = async (event) => {
       const { name } = artifacts.find((item) => item.id === event.message.text)
       const { data } = await getArtifactDetail(name)
       await replyFlexMsg(event, artifactsDetails(name))
+      //เพิ่ม emoji
       await replyMsg(
         event,
         `Artifact ที่คุณนักเดินทางขอ ชื่อ ${data.name}
@@ -57,8 +58,7 @@ const handleEvent = async (event) => {
 เมื่อใส่เซ็ต 2 ชิ้นจะมีผลดังนี้ :
 ${data['2-piece_bonus']}
 เมื่อใส่เซ็ต 4 ชิ้นจะมีผลดังนี้ :
-${data['4-piece_bonus']}
-      `,
+${data['4-piece_bonus']}`,
       )
     }
     //no-text
