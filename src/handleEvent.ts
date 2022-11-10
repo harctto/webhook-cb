@@ -84,28 +84,30 @@ const handleEvent = async (event: IEventLine) => {
           altText: getDetail.data.name + ', ' + getDetail.data.affiliation,
         }).then(() => {
           // แสดงอะไรบ้าง
-          replyMsg({
-            event,
-            isMulti: true,
-            multiMessage: [
-              `📌 หมายเหตุ: ข้อมูลดังกล่าวคือข้อมูลประจำแพทช์ 3.0 📌`,
-              `👉🏻👉🏻👉🏻 นี่คือข้อมูลส่วนตัวของ ${getDetail.data.name}
+          setTimeout(() => {
+            replyMsg({
+              event,
+              isMulti: true,
+              multiMessage: [
+                `📌 หมายเหตุ: ข้อมูลดังกล่าวคือข้อมูลประจำแพทช์ 3.0 📌`,
+                `👉🏻👉🏻 นี่คือข้อมูลส่วนตัวของ ${getDetail.data.name}
 ฉายา: ${getDetail.data.title}
 สัญชาติ: ${getDetail.data.nation}
 ใช้อาวุธประเภท: ${getDetail.data.weapon}
-              
+                
 ${getDetail.data.description}`,
-              `สามารถมีดังนี้
+                `สามารถมีดังนี้
 👊🏻 โจมตีปกติ: (ชื่อท่า)
   (อธิบาย)
-              
+                
 ✨ สกิลธาตุ: (ชื่อท่า)
   (อธิบาย)
-              
+                
 🔥 ท่าไม้ตาย: (ชื่อท่า)
   (อธิบาย)`,
-            ],
-          })
+              ],
+            })
+          },1000)
         })
       }
     }
