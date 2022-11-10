@@ -735,9 +735,9 @@ const weapons = [
     type: 'bow'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
+    id: 'W30',
+    name: 'elegy-for-the-end',
+    type: 'bow'
   },
   {
     id: 'W3',
