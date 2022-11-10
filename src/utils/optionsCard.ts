@@ -364,7 +364,7 @@ const elements: any = {
       action: {
         type: 'message',
         label: 'action',
-        text: 'geo',
+        text: 'eo',
       },
     },
     {
@@ -527,6 +527,7 @@ const charactersPick = (data: ICharacter[]) => {
     }
 
     const findColors = colors.find((el) => el.element === data.elements)
+    const imgType = data.name.includes('traveler') ? 'portrait' : 'icon-big'
 
     return {
       type: 'bubble',
@@ -537,7 +538,7 @@ const charactersPick = (data: ICharacter[]) => {
         contents: [
           {
             type: 'image',
-            url: `https://api.genshin.dev/characters/${data.name}}/${data.name.includes("traveler") ? 'portrait' : 'icon-big'}`,
+            url: `https://api.genshin.dev/characters/${data.name}/${imgType}`,
             aspectMode: 'fit',
             aspectRatio: '2:3',
             gravity: 'center',
@@ -1043,7 +1044,7 @@ const charactersDetails = async (data: ICharacterDetail, urlName: string) => {
                   contents: [
                     {
                       type: 'text',
-                      text: data.title,
+                      text: data.title ? data.title : data.affiliation,
                       color: '#ffffff',
                       size: 'xs',
                       flex: 0,

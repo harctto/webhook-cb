@@ -307,7 +307,7 @@ const characters: ICharacter[] = [
   },
   {
     id: 'Char38',
-    name: 'surcrose',
+    name: 'sucrose',
     elements: 'anemo',
     rarity: 4,
   },
@@ -745,127 +745,127 @@ const weapons = [
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W32',
+    name: 'engulfing-lightning',
+    type: 'polearm'
+  },
+  {
+    id: 'W33',
+    name: 'everlasting-moonglow',
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W34',
+    name: 'eye-of-perception',
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W35',
+    name: 'ambfavonius-codex',
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W36',
+    name: 'favonius-greatsword',
+    type: 'claymore'
+  },
+  {
+    id: 'W37',
+    name: 'favonius-lance',
+    type: 'polearm'
+  },
+  {
+    id: 'W38',
+    name: 'favonius-sword',
+    type: 'sword'
+  },
+  {
+    id: 'W39',
+    name: 'favonius-warbow',
+    type: 'bow'
+  },
+  {
+    id: 'W40',
+    name: 'ferrous-shadow',
+    type: 'claymore'
+  },
+  {
+    id: 'W41',
+    name: 'festering-desire',
+    type: 'sword'
+  },
+  {
+    id: 'W42',
+    name: 'fillet-blade',
+    type: 'sword'
+  },
+  {
+    id: 'W43',
+    name: 'freedom-sworn',
+    type: 'sword'
+  },
+  {
+    id: 'W44',
+    name: 'frostbearer',
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W45',
+    name: 'hakushin-ring',
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W46',
+    name: 'halberd',
+    type: 'polearm'
+  },
+  {
+    id: 'W47',
+    name: 'hamayumi',
+    type: 'bow'
+  },
+  {
+    id: 'W48',
+    name: 'haran-geppaku-futsu',
+    type: 'sword'
+  },
+  {
+    id: 'W49',
+    name: 'harbinger-of-dawn',
+    type: 'sword'
+  },
+  {
+    id: 'W50',
+    name: 'hunter-s-bow',
+    type: 'bow'
+  },
+  {
+    id: 'W51',
+    name: 'iron-point',
+    type: 'polearm'
+  },
+  {
+    id: 'W52',
+    name: 'iron-sting',
+    type: 'sword'
+  },
+  {
+    id: 'W53',
+    name: `kagura's-verity`,
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
+    id: 'W54',
+    name: 'katsuragikiri-nagamasa',
+    type: 'claymore'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
+    id: 'W55',
+    name: 'kitain-cross-spear',
+    type: 'polearm'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
+    id: 'W56',
     name: 'amber-catalyst',
     type: 'catalyst'
   },

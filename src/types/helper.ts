@@ -1,3 +1,4 @@
+import { type } from "os"
 import { IEventLine } from "./api"
 
 export interface IReplyFlexMsg {
@@ -9,5 +10,12 @@ export interface IReplyFlexMsg {
 
 export interface IReplyMsg {
     event: IEventLine
-    message: string
+    message?: string
+    isMulti? : boolean
+    multiMessage?: string[]
+}
+
+export interface IMessagePayload {
+    type: string
+    text: string
 }

@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Client } from '@line/bot-sdk'
 import { Config, Message, MiddlewareConfig } from '@line/bot-sdk/dist/types'
 import dotenv from 'dotenv'
-import { IReplyFlexMsg, IReplyMsg } from '../types/helper'
+import { IMessagePayload, IReplyFlexMsg, IReplyMsg } from '../types/helper'
 dotenv.config()
 
 const SECRET_TOKEN = process.env.SECRET_TOKEN!
@@ -55,13 +55,27 @@ const pushMsg = async ({ type, event, message, altText }: IReplyFlexMsg) => {
     })
 }
 
-const replyMsg = async ({ event, message }: IReplyMsg) => {
-  const messagePush: any = [
-    {
-      type: 'text',
-      text: message,
-    },
-  ]
+const replyMsg = async ({ event, message, isMulti, multiMessage }: IReplyMsg) => {
+  let messagePush: Message[] = []
+  if (isMulti) {
+    if (multiMessage) {
+      multiMessage.map((el) => {
+        messagePush.push({
+          type: 'text',
+          text: el
+        })
+      })
+    }
+  } else {
+    if (message) {
+      messagePush = [
+        {
+          type: 'text',
+          text: message,
+        },
+      ]
+    }
+  }
   client
     .replyMessage(event.replyToken, messagePush)
     .then(() => {

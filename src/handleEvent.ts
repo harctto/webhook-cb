@@ -81,12 +81,16 @@ const handleEvent = async (event: IEventLine) => {
           type: 'flex',
           event,
           message: flexMsg,
-          altText: getDetail.data.name,
+          altText: getDetail.data.name+", "+getDetail.data.affiliation,
         })
         // แสดงอะไรบ้าง
         await replyMsg({
           event,
-          message: ``,
+          isMulti: true,
+          multiMessage: [
+            `สวัสดีฉัน ${getDetail.data.name}`,
+            `ฉันอยู่ในเมือง ${getDetail.data.nation}`
+          ]
         })
       }
     }
