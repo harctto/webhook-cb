@@ -515,7 +515,7 @@ const elements: any = {
   ],
 }
 
-const charactersPick = async (data: ICharacter[]) => {
+const charactersPick = (data: ICharacter[]) => {
   const mapArray = data.map((data) => {
     return {
       type: 'bubble',

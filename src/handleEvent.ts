@@ -24,7 +24,11 @@ import {
 import { ICharacter } from './types/constant'
 
 const test = async () => {
-  
+  if (elementsConstant.includes('anemo')) {
+    const payload = characters.filter((el) => el.elements === 'anemo')
+    const get = charactersPick(payload)
+    console.log(get)
+  }
 }
 
 const handleEvent = async (event: IEventLine) => {
@@ -67,7 +71,7 @@ const handleEvent = async (event: IEventLine) => {
         altText: 'เลือกตัวละครได้เลย',
       })
     }
-
+    
     //weapons
     else if (event.message.text === 'weapons') {
       await replyMsg({
