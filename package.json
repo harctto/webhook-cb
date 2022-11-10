@@ -5,14 +5,17 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon",
-    "start": "npm run build && node build/index.js",
-    "build": "rimraf ./build && tsc"
+    "start": "npm run build-file && node build/index.js",
+    "build-file": "rimraf ./build && tsc"
   },
   "dependencies": {
     "@line/bot-sdk": "^7.5.2",
     "axios": "^1.1.3",
     "dotenv": "^16.0.3",
     "express": "^4.18.2"
+  },
+  "engines" : {
+    "node" : ">=16"
   },
   "keywords": [],
   "author": "",
