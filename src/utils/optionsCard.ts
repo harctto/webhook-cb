@@ -987,7 +987,7 @@ const charactersDetails = async (data: ICharacterDetail, urlName: string) => {
 
   return {
     type: 'bubble',
-    size: 'mega',
+    size: 'kilo',
     body: {
       type: 'box',
       layout: 'vertical',
@@ -1032,7 +1032,7 @@ const charactersDetails = async (data: ICharacterDetail, urlName: string) => {
                     {
                       type: 'text',
                       text: data.name,
-                      size: 'sm',
+                      size: 'xl',
                       color: '#ffffff',
                     },
                   ],
