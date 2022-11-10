@@ -36,8 +36,6 @@ app.post(
   },
 )
 
-
-
 const handleEvent = async (event: IEventLine) => {
   if (event.message.text) {
     //greeting
@@ -78,11 +76,12 @@ const handleEvent = async (event: IEventLine) => {
       await replyMsg(
         event,
         `Artifact ที่คุณนักเดินทางขอ ชื่อ ${data.name}
-  ซึ่งมีระดับความหายากมากที่สุด ${data.max_rarity} ดาว
-  ---------------------------
-  เมื่อใส่เซ็ต 2 ชิ้นจะมีผลดังนี้ :
+ซึ่งมีระดับความหายากมากที่สุด ${data.max_rarity} ดาว
+---------------------------------
+เมื่อใส่เซ็ต 2 ชิ้นจะมีผลดังนี้ :
   ${data['2-piece_bonus']}
-  เมื่อใส่เซ็ต 4 ชิ้นจะมีผลดังนี้ :
+---------------------------------
+เมื่อใส่เซ็ต 4 ชิ้นจะมีผลดังนี้ :
   ${data['4-piece_bonus']}`,
       )
     }
