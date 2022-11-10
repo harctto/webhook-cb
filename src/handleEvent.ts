@@ -90,7 +90,8 @@ const handleEvent = async (event: IEventLine) => {
               isMulti: true,
               multiMessage: [
                 `📌 หมายเหตุ: ข้อมูลดังกล่าวคือข้อมูลประจำแพทช์ 3.0 📌`,
-                `👉🏻👉🏻 นี่คือข้อมูลส่วนตัวของ ${getDetail.data.name}
+                `👉🏻👉🏻 นี่คือข้อมูลส่วนตัวของคุณ ${getDetail.data.name} เท่าที่ฉันหาได้ค่ะ
+ชื่อ: ${getDetail.data.name}
 ฉายา: ${getDetail.data.title}
 สัญชาติ: ${getDetail.data.nation}
 ใช้อาวุธประเภท: ${getDetail.data.weapon}

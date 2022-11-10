@@ -11,6 +11,7 @@ const elements: any = {
       type: 'bubble',
       size: 'micro',
       body: {
+        backgroundColor: '#3d3e4a',
         type: 'box',
         layout: 'vertical',
         contents: [
@@ -83,6 +84,7 @@ const elements: any = {
       type: 'bubble',
       size: 'micro',
       body: {
+        backgroundColor: '#3d3e4a',
         type: 'box',
         layout: 'vertical',
         contents: [
@@ -155,6 +157,7 @@ const elements: any = {
       type: 'bubble',
       size: 'micro',
       body: {
+        backgroundColor: '#3d3e4a',
         type: 'box',
         layout: 'vertical',
         contents: [
@@ -227,6 +230,7 @@ const elements: any = {
       type: 'bubble',
       size: 'micro',
       body: {
+        backgroundColor: '#3d3e4a',
         type: 'box',
         layout: 'vertical',
         contents: [
@@ -299,6 +303,7 @@ const elements: any = {
       type: 'bubble',
       size: 'micro',
       body: {
+        backgroundColor: '#3d3e4a',
         type: 'box',
         layout: 'vertical',
         contents: [
@@ -371,6 +376,7 @@ const elements: any = {
       type: 'bubble',
       size: 'micro',
       body: {
+        backgroundColor: '#3d3e4a',
         type: 'box',
         layout: 'vertical',
         contents: [
@@ -443,6 +449,7 @@ const elements: any = {
       type: 'bubble',
       size: 'micro',
       body: {
+        backgroundColor: '#3d3e4a',
         type: 'box',
         layout: 'vertical',
         contents: [
