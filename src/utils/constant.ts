@@ -31,7 +31,232 @@ const noAnswer: String[] = [
   'Katheryne ไม่เข้าใจ พูดใหม่ได้ไหมคะ',
 ]
 
-const characters: String[] = ['test']
+const characters: any[] = [
+  {
+    id: 'Char1',
+    name: 'albedo'
+  },
+  {
+    id: 'Char2',
+    name: 'aloy'
+  },
+  {
+    id: 'Char3',
+    name: 'amber'
+  },
+  {
+    id: 'Char4',
+    name: 'arataki-itto'
+  },
+  {
+    id: 'Char5',
+    name: 'ayaka'
+  },
+  {
+    id: 'Char6',
+    name: 'ayato'
+  },
+  {
+    id: 'Char7',
+    name: 'barbara'
+  },
+  {
+    id: 'Char8',
+    name: 'beidou'
+  },
+  {
+    id: 'Char9',
+    name: 'bennett'
+  },
+  {
+    id: 'Char10',
+    name: 'chongyun'
+  },
+  {
+    id: 'Char11',
+    name: 'collei'
+  },
+  {
+    id: 'Char12',
+    name: 'diluc'
+  },
+  {
+    id: 'Char13',
+    name: 'diona'
+  },
+  {
+    id: 'Char14',
+    name: 'eula'
+  },
+  {
+    id: 'Char15',
+    name: 'fischl'
+  },
+  {
+    id: 'Char16',
+    name: 'ganyu'
+  },
+  {
+    id: 'Char17',
+    name: 'gorou'
+  },
+  {
+    id: 'Char18',
+    name: 'hu-tao'
+  },
+  {
+    id: 'Char19',
+    name: 'jean'
+  },
+  {
+    id: 'Char20',
+    name: 'keaya'
+  },
+  {
+    id: 'Char21',
+    name: 'kazuha'
+  },
+  {
+    id: 'Char22',
+    name: 'keqing'
+  },
+  {
+    id: 'Char23',
+    name: 'klee'
+  },
+  {
+    id: 'Char24',
+    name: 'kokomi'
+  },
+  {
+    id: 'char25',
+    name: 'kuki-shinobu'
+  },
+  {
+    id: 'Char26',
+    name: 'lisa'
+  },
+  {
+    id: 'Char27',
+    name: 'mona'
+  },
+  {
+    id: 'Char28',
+    name: 'ningguang'
+  },
+  {
+    id: 'Char29',
+    name: 'nolle'
+  },
+  {
+    id: 'Char30',
+    name: 'qiqi'
+  },
+  {
+    id: 'Char31',
+    name: 'raiden'
+  },
+  {
+    id: 'Char32',
+    name: 'razor'
+  },
+  {
+    id: 'Char33',
+    name: 'rosaria'
+  },
+  {
+    id: 'Char34',
+    name: 'sara'
+  },
+  {
+    id: 'Char35',
+    name: 'sayu'
+  },
+  {
+    id: 'Char36',
+    name: 'shenhe'
+  },
+  {
+    id: 'Char37',
+    name: 'shikanoin-heizou'
+  },
+  {
+    id: 'Char38',
+    name: 'surcrose'
+  },
+  {
+    id: 'Char39',
+    name: 'tartaglia'
+  },
+  {
+    id: 'Char40',
+    name: 'thoma'
+  },
+  {
+    id: 'Char41',
+    name: 'tighnari'
+  },
+  {
+    id: 'Char42',
+    name: 'traveler-anemo'
+  },
+  {
+    id: 'Char43',
+    name: 'traveler-dendro'
+  },
+  {
+    id: 'Char44',
+    name: 'traveler-electro'
+  },
+  {
+    id: 'Char45',
+    name: 'traveler-geo'
+  },
+  {
+    id: 'Char46',
+    name: 'venti'
+  },
+  {
+    id: 'Char47',
+    name: 'xiangling'
+  },
+  {
+    id: 'Char48',
+    name: 'xiao'
+  },
+  {
+    id: 'Char49',
+    name: 'xingqiu'
+  },
+  {
+    id: 'Char50',
+    name: 'xinyan'
+  },
+  {
+    id: 'Char51',
+    name: 'yae-miko'
+  },
+  {
+    id: 'Char52',
+    name: 'yanfei'
+  },
+  {
+    id: 'Char53',
+    name: 'yelan'
+  },
+  {
+    id: 'Char54',
+    name: 'yoimiya'
+  },
+  {
+    id: 'Char55',
+    name: 'yun-jin'
+  },
+  {
+    id: 'Char56',
+    name: 'zhongli'
+  }
+]
 
 const artifacts: any[] = [
   {
