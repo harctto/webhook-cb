@@ -1,3 +1,5 @@
+import { ICharacter } from "../types/constant"
+
 const recieveHello: string[] = [
   'สวัสดี',
   'ดีจ้า',
@@ -30,232 +32,306 @@ const noAnswer: string[] = [
   'ฉันไม่เข้าใจที่คุณนักเดินทางพูดค่ะ หากสงสัยเรื่องใด กดช่องเมนูได้นะคะ',
   'Katheryne ไม่เข้าใจ หากสงสัยเรื่องใด กดช่องเมนูได้นะคะ',
 ]
+const elementsConstant: string[] = [
+  'anemo',
+  'cryo',
+  'dendro',
+  'electro',
+  'geo',
+  'hydro',
+  'pyro',
+]
 
-const characters: any[] = [
+//ประเภทอาวุธ
+const typeConstant: string[] = [
+  'sword',
+  'claymore',
+  'polearm',
+  'catalyst',
+  'bow'
+]
+
+const characters: ICharacter[] = [
   {
     id: 'Char1',
-    name: 'albedo'
+    name: 'albedo',
+    elements: 'geo',
   },
   {
     id: 'Char2',
-    name: 'aloy'
+    name: 'aloy',
+    elements: 'cryo',
   },
   {
     id: 'Char3',
-    name: 'amber'
+    name: 'amber',
+    elements: 'pyro',
   },
   {
     id: 'Char4',
-    name: 'arataki-itto'
+    name: 'arataki-itto',
+    elements: 'geo',
   },
   {
     id: 'Char5',
-    name: 'ayaka'
+    name: 'ayaka',
+    elements: 'cryo',
   },
   {
     id: 'Char6',
-    name: 'ayato'
+    name: 'ayato',
+    elements: 'hydro',
   },
   {
     id: 'Char7',
-    name: 'barbara'
+    name: 'barbara',
+    elements: 'hydro',
   },
   {
     id: 'Char8',
-    name: 'beidou'
+    name: 'beidou',
+    elements: 'electro',
   },
   {
     id: 'Char9',
-    name: 'bennett'
+    name: 'bennett',
+    elements: 'pyro',
   },
   {
     id: 'Char10',
-    name: 'chongyun'
+    name: 'chongyun',
+    elements: 'cryo',
   },
   {
     id: 'Char11',
-    name: 'collei'
+    name: 'collei',
+    elements: 'dendro',
   },
   {
     id: 'Char12',
-    name: 'diluc'
+    name: 'diluc',
+    elements: 'pyro',
   },
   {
     id: 'Char13',
-    name: 'diona'
+    name: 'diona',
+    elements: 'cryo',
   },
   {
     id: 'Char14',
-    name: 'eula'
+    name: 'eula',
+    elements: 'cryo',
   },
   {
     id: 'Char15',
-    name: 'fischl'
+    name: 'fischl',
+    elements: 'electro',
   },
   {
     id: 'Char16',
-    name: 'ganyu'
+    name: 'ganyu',
+    elements: 'cryo',
   },
   {
     id: 'Char17',
-    name: 'gorou'
+    name: 'gorou',
+    elements: 'geo',
   },
   {
     id: 'Char18',
-    name: 'hu-tao'
+    name: 'hu-tao',
+    elements: 'pyro',
   },
   {
     id: 'Char19',
-    name: 'jean'
+    name: 'jean',
+    elements: 'anemo',
   },
   {
     id: 'Char20',
-    name: 'keaya'
+    name: 'keaya',
+    elements: 'cyro',
   },
   {
     id: 'Char21',
-    name: 'kazuha'
+    name: 'kazuha',
+    elements: 'anemo',
   },
   {
     id: 'Char22',
-    name: 'keqing'
+    name: 'keqing',
+    elements: 'electro',
   },
   {
     id: 'Char23',
-    name: 'klee'
+    name: 'klee',
+    elements: 'pyro',
   },
   {
     id: 'Char24',
-    name: 'kokomi'
+    name: 'kokomi',
+    elements: 'hydro',
   },
   {
     id: 'char25',
-    name: 'kuki-shinobu'
+    name: 'kuki-shinobu',
+    elements: 'electro',
   },
   {
     id: 'Char26',
-    name: 'lisa'
+    name: 'lisa',
+    elements: 'electro',
   },
   {
     id: 'Char27',
-    name: 'mona'
+    name: 'mona',
+    elements: 'hydro',
   },
   {
     id: 'Char28',
-    name: 'ningguang'
+    name: 'ningguang',
+    elements: 'geo',
   },
   {
     id: 'Char29',
-    name: 'nolle'
+    name: 'nolle',
+    elements: 'geo',
   },
   {
     id: 'Char30',
-    name: 'qiqi'
+    name: 'qiqi',
+    elements: 'cryo',
   },
   {
     id: 'Char31',
-    name: 'raiden'
+    name: 'raiden',
+    elements: 'electro',
   },
   {
     id: 'Char32',
-    name: 'razor'
+    name: 'razor',
+    elements: 'electro',
   },
   {
     id: 'Char33',
-    name: 'rosaria'
+    name: 'rosaria',
+    elements: 'cryo',
   },
   {
     id: 'Char34',
-    name: 'sara'
+    name: 'sara',
+    elements: 'electro',
   },
   {
     id: 'Char35',
-    name: 'sayu'
+    name: 'sayu',
+    elements: 'anemo',
   },
   {
     id: 'Char36',
-    name: 'shenhe'
+    name: 'shenhe',
+    elements: 'cryo',
   },
   {
     id: 'Char37',
-    name: 'shikanoin-heizou'
+    name: 'shikanoin-heizou',
+    elements: 'anemo',
   },
   {
     id: 'Char38',
-    name: 'surcrose'
+    name: 'surcrose',
+    elements: 'anemo',
   },
   {
     id: 'Char39',
-    name: 'tartaglia'
+    name: 'tartaglia',
+    elements: 'hydro',
   },
   {
     id: 'Char40',
-    name: 'thoma'
+    name: 'thoma',
+    elements: 'pyro'
   },
   {
     id: 'Char41',
-    name: 'tighnari'
+    name: 'tighnari',
+    elements: 'dendro',
   },
   {
     id: 'Char42',
-    name: 'traveler-anemo'
+    name: 'traveler-anemo',
+    elements: 'anemo',
   },
   {
     id: 'Char43',
-    name: 'traveler-dendro'
+    name: 'traveler-dendro',
+    elements: 'dendro',
   },
   {
     id: 'Char44',
-    name: 'traveler-electro'
+    name: 'traveler-electro',
+    elements: 'electro',
   },
   {
     id: 'Char45',
-    name: 'traveler-geo'
+    name: 'traveler-geo',
+    elements: 'geo',
   },
   {
     id: 'Char46',
-    name: 'venti'
+    name: 'venti',
+    elements: 'anemo',
   },
   {
     id: 'Char47',
-    name: 'xiangling'
+    name: 'xiangling',
+    elements: 'pyro',
   },
   {
     id: 'Char48',
-    name: 'xiao'
+    name: 'xiao',
+    elements: 'anemo',
   },
   {
     id: 'Char49',
-    name: 'xingqiu'
+    name: 'xingqiu',
+    elements: 'hydro',
   },
   {
     id: 'Char50',
-    name: 'xinyan'
+    name: 'xinyan',
+    elements: 'pyro',
   },
   {
     id: 'Char51',
-    name: 'yae-miko'
+    name: 'yae-miko',
+    elements: 'electro',
   },
   {
     id: 'Char52',
-    name: 'yanfei'
+    name: 'yanfei',
+    elements: 'pyro',
   },
   {
     id: 'Char53',
-    name: 'yelan'
+    name: 'yelan',
+    elements: 'hydro',
   },
   {
     id: 'Char54',
-    name: 'yoimiya'
+    name: 'yoimiya',
+    elements: 'pyro',
   },
   {
     id: 'Char55',
-    name: 'yun-jin'
+    name: 'yun-jin',
+    elements: 'geo',
   },
   {
     id: 'Char56',
-    name: 'zhongli'
-  }
+    name: 'zhongli',
+    elements: 'geo',
+  },
 ]
 
 const artifacts: any[] = [
@@ -425,4 +501,25 @@ const artifacts: any[] = [
   },
 ]
 
-export { recieveHello, responseHello, noAnswer, characters, artifacts }
+const weapons = [
+  {
+    id: 'W1',
+    name: 'akuoumaru',
+    type: 'Claymore'
+  },
+  {
+    id: 'W2',
+    name: 'alley-hunter',
+    type: 'Bow'
+  },
+]
+
+export {
+  recieveHello,
+  responseHello,
+  noAnswer,
+  elementsConstant,
+  characters,
+  artifacts,
+  weapons,
+}

@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { ICharacterDetail } from '../types/api'
 
 const getArtifact = async () => {
   try {
@@ -39,4 +40,36 @@ const getArtifactDetail = async (name: string) => {
   }
 }
 
-export { getArtifact, getArtifactDetail }
+const getCharacter = async () => {
+  try {
+    const res = await axios.get(`${process.env.API_URL}/characters`)
+    return {
+      status: true,
+      data: res.data,
+    }
+  } catch (err) {
+    return {
+      status: false,
+      data: null,
+      msg: err,
+    }
+  }
+}
+
+const getCharacterDetail = async (name: string) => {
+  try {
+    const res = await axios.get<ICharacterDetail>(`${process.env.API_URL}/characters/${name}`)
+    return {
+      status: true,
+      data: res.data,
+    }
+  } catch (err) {
+    return {
+      status: false,
+      data: null,
+      msg: err,
+    }
+  }
+}
+
+export { getArtifact, getArtifactDetail, getCharacter, getCharacterDetail }

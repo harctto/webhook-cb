@@ -1,5 +1,9 @@
-import { IOptionsCardAf } from '../types/optionsCard'
-import { IOptionsCardChar } from '../types/optionsCard'
+import { ICharacter } from '../types/constant'
+import {
+  IOptionsCardAf,
+  IOptionsCardChars,
+  IOptionsCardChar,
+} from '../types/optionsCard'
 
 const elements: any = {
   type: 'carousel',
@@ -511,7 +515,124 @@ const elements: any = {
   ],
 }
 
-const weapons = {
+const charactersPick = async (data: ICharacter[]) => {
+  const mapArray = data.map((data) => {
+    return {
+      type: 'bubble',
+      body: {
+        type: 'box',
+        layout: 'vertical',
+        contents: [
+          {
+            type: 'image',
+            url:
+              `https://api.genshin.dev/characters/${data.name}/icon-big`,
+            size: 'full',
+            aspectMode: 'cover',
+            aspectRatio: '1:1',
+            gravity: 'center',
+          },
+          {
+            type: 'box',
+            layout: 'vertical',
+            contents: [],
+            position: 'absolute',
+            background: {
+              type: 'linearGradient',
+              angle: '0deg',
+              endColor: '#00000000',
+              startColor: '#00000099',
+            },
+            width: '100%',
+            height: '40%',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+          },
+          {
+            type: 'box',
+            layout: 'horizontal',
+            contents: [
+              {
+                type: 'box',
+                layout: 'vertical',
+                contents: [
+                  {
+                    type: 'box',
+                    layout: 'horizontal',
+                    contents: [
+                      {
+                        type: 'text',
+                        text: 'Brown Grand Hotel',
+                        size: 'xl',
+                        color: '#ffffff',
+                      },
+                    ],
+                  },
+                  {
+                    type: 'box',
+                    layout: 'baseline',
+                    contents: [
+                      {
+                        type: 'icon',
+                        url:
+                          'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
+                      },
+                      {
+                        type: 'icon',
+                        url:
+                          'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
+                      },
+                      {
+                        type: 'icon',
+                        url:
+                          'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
+                      },
+                      {
+                        type: 'icon',
+                        url:
+                          'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
+                      },
+                      {
+                        type: 'icon',
+                        url:
+                          'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png',
+                      },
+                      {
+                        type: 'text',
+                        text: '4.0',
+                        color: '#a9a9a9',
+                      },
+                    ],
+                    spacing: 'xs',
+                  },
+                ],
+                spacing: 'xs',
+              },
+            ],
+            position: 'absolute',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+            paddingAll: '20px',
+          },
+        ],
+        paddingAll: '0px',
+      },
+      action: {
+        type: 'message',
+        label: 'action',
+        text: 'hello',
+      },
+    }
+  })
+  return {
+    type: 'carousel',
+    content: mapArray,
+  }
+}
+
+const weaponsType = {
   type: 'carousel',
   contents: [
     {
@@ -584,7 +705,7 @@ const weapons = {
       action: {
         type: 'message',
         label: 'action',
-        text: 'Sword',
+        text: 'sword',
       },
     },
     {
@@ -656,7 +777,7 @@ const weapons = {
       action: {
         type: 'message',
         label: 'action',
-        text: 'Claymore',
+        text: 'claymore',
       },
     },
     {
@@ -728,7 +849,7 @@ const weapons = {
       action: {
         type: 'message',
         label: 'action',
-        text: 'Polearm',
+        text: 'polearm',
       },
     },
     {
@@ -800,7 +921,7 @@ const weapons = {
       action: {
         type: 'message',
         label: 'action',
-        text: 'Catalyst',
+        text: 'catalyst',
       },
     },
     {
@@ -885,97 +1006,102 @@ const charactersDetails = ({ name, displayName }: IOptionsCardChar) => {
       type: 'box',
       layout: 'vertical',
       contents: [
-            {
-              type: 'image',
-              url: `https://api.genshin.dev/characters/${name}/icon-big`,
-              size: 'full',
-              aspectMode: 'cover',
-              aspectRatio: '1:1',
-              gravity: 'center'
-            },
+        {
+          type: 'image',
+          url: `https://api.genshin.dev/characters/${name}/icon-big`,
+          size: 'full',
+          aspectMode: 'cover',
+          aspectRatio: '1:1',
+          gravity: 'center',
+        },
+        {
+          type: 'box',
+          layout: 'vertical',
+          contents: [],
+          position: 'absolute',
+          background: {
+            type: 'linearGradient',
+            angle: '0deg',
+            endColor: '#00000000',
+            startColor: '#00000099',
+          },
+          width: '100%',
+          height: '40%',
+          offsetBottom: '0px',
+          offsetStart: '0px',
+          offsetEnd: '0px',
+        },
+        {
+          type: 'box',
+          layout: 'horizontal',
+          contents: [
             {
               type: 'box',
-              layout: "vertical",
-              contents: [],
-              position: "absolute",
-              background: {
-                type: "linearGradient",
-                angle: "0deg",
-                endColor: "#00000000",
-                startColor: "#00000099"
-              },
-              width: "100%",
-              height: "40%",
-              offsetBottom: "0px",
-              offsetStart: "0px",
-              offsetEnd: "0px"
-            },
-            {
-              type: "box",
-              layout: "horizontal",
+              layout: 'vertical',
               contents: [
                 {
-                  type: "box",
-                  layout: "vertical",
+                  type: 'box',
+                  layout: 'horizontal',
                   contents: [
                     {
-                      type: "box",
-                      layout: "horizontal",
-                      contents: [
-                        {
-                          type: "text",
-                          text: displayName,
-                          size: "xl",
-                          color: "#ffffff"
-                        }
-                      ]
+                      type: 'text',
+                      text: displayName,
+                      size: 'xl',
+                      color: '#ffffff',
+                    },
+                  ],
+                },
+                {
+                  type: 'box',
+                  layout: 'baseline',
+                  // ตรงนี้เป็น mock up ดาว
+                  contents: [
+                    {
+                      type: 'icon',
+                      url:
+                        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
                     },
                     {
-                      type: "box",
-                      layout: "baseline",
-                      // ตรงนี้เป็น mock up ดาว
-                      contents: [
-                        {
-                          type: "icon",
-                          url: "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                        },
-                        {
-                          type: "icon",
-                          url: "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                        },
-                        {
-                          type: "icon",
-                          url: "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                        },
-                        {
-                          type: "icon",
-                          url: "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png"
-                        },
-                        {
-                          type: "icon",
-                          url: "https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png"
-                        },
-                        {
-                          type: "text",
-                          text: "4.0",
-                          color: "#a9a9a9"
-                        }
-                      ],
-                      spacin: "xs"
-                    }
+                      type: 'icon',
+                      url:
+                        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
+                    },
+                    {
+                      type: 'icon',
+                      url:
+                        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
+                    },
+                    {
+                      type: 'icon',
+                      url:
+                        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
+                    },
+                    {
+                      type: 'icon',
+                      url:
+                        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png',
+                    },
+                    {
+                      type: 'text',
+                      text: '4.0',
+                      color: '#a9a9a9',
+                    },
                   ],
-                  spacing: "xs"
-                }
+                  spacin: 'xs',
+                },
               ],
-              position: "absolute",
-              offsetBottom: "0px",
-              offsetStart: "0px",
-              offsetEnd: "0px",
-              paddingAll: "20px"
-            }
+              spacing: 'xs',
+            },
           ],
-            paddingAll: "0px"
-    }
+          position: 'absolute',
+          offsetBottom: '0px',
+          offsetStart: '0px',
+          offsetEnd: '0px',
+          paddingAll: '20px',
+        },
+      ],
+      paddingAll: '0px',
+    },
   }
 }
 
@@ -1029,4 +1155,10 @@ const artifactsDetails = ({ name, fullname }: IOptionsCardAf) => {
   }
 }
 
-export { elements, weapons, charactersDetails, artifactsDetails }
+export {
+  elements,
+  weaponsType,
+  charactersPick,
+  charactersDetails,
+  artifactsDetails,
+}

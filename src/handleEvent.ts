@@ -3,11 +3,29 @@ import {
   responseHello,
   noAnswer,
   artifacts,
+  characters,
+  elementsConstant,
+  weapons,
 } from './utils/constant'
-import { getArtifact, getArtifactDetail } from './services/api'
+import {
+  getArtifact,
+  getArtifactDetail,
+  getCharacter,
+  getCharacterDetail,
+} from './services/api'
 import { randomWord, pushMsg, replyMsg } from './utils/helper'
-import { IEventLine } from './types/api'
-import { artifactsDetails, elements, weapons } from './utils/optionsCard'
+import { ICharacterDetail, IEventLine } from './types/api'
+import {
+  artifactsDetails,
+  charactersPick,
+  elements,
+  weaponsType,
+} from './utils/optionsCard'
+import { ICharacter } from './types/constant'
+
+const test = async () => {
+  
+}
 
 const handleEvent = async (event: IEventLine) => {
   if (event.message.text) {
@@ -33,6 +51,22 @@ const handleEvent = async (event: IEventLine) => {
     }
 
     //characters list
+    else if (elementsConstant.includes(event.message.text)) {
+      const payload = characters.filter(
+        (el) => el.elements === event.message.text,
+      )
+      const flexMsg = charactersPick(payload)
+      await replyMsg({
+        event,
+        message: 'เลือกตัวละครได้เลย',
+      })
+      await pushMsg({
+        type: 'flex',
+        event,
+        message: flexMsg,
+        altText: 'เลือกตัวละครได้เลย',
+      })
+    }
 
     //weapons
     else if (event.message.text === 'weapons') {
@@ -54,8 +88,8 @@ const handleEvent = async (event: IEventLine) => {
       const { data } = await getArtifact()
       if (data) {
         replyMsg({
-          event, 
-          message: data
+          event,
+          message: data,
         })
       }
     }
@@ -91,12 +125,12 @@ ${
     }
     //no-text
     else {
-      replyMsg({ 
-        event, 
-        message: randomWord(noAnswer) 
+      replyMsg({
+        event,
+        message: randomWord(noAnswer),
       })
     }
   }
 }
 
-export { handleEvent }
+export { handleEvent, test }

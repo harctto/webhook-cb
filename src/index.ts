@@ -4,12 +4,14 @@ import { middleware } from '@line/bot-sdk'
 import {
   LINE_CONFIG_MIDDLEWARE,
 } from './utils/helper'
-import { handleEvent } from './handleEvent'
+import { handleEvent, test } from './handleEvent'
 
 dotenv.config()
 
 const app: Express = express()
 const port = process.env.PORT
+
+test()
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Chatbot Webhook Server')
