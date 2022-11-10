@@ -1,26 +1,41 @@
-const dotenv = require('dotenv')
-const env = dotenv.config().parsed
-const axios = require('axios')
+import { IEventLine } from '../types/api'
+import axios from 'axios'
+import { Config, MiddlewareConfig } from '@line/bot-sdk/dist/types'
+import dotenv from 'dotenv'
+dotenv.config()
 
-const LINE_CONFIG = {
-  channelAccessToken: env.ACCESS_TOKEN,
-  channelSecret: env.SECRET_TOKEN,
+const SECRET_TOKEN = process.env.SECRET_TOKEN!
+const ACCESS_TOKEN = process.env.ACCESS_TOKEN!
+
+const LINE_CONFIG: Config | MiddlewareConfig = {
+  channelAccessToken: ACCESS_TOKEN,
+  channelSecret: SECRET_TOKEN
 }
+
+const LINE_CONFIG_MIDDLEWARE: MiddlewareConfig = {
+  channelAccessToken: ACCESS_TOKEN,
+  channelSecret: SECRET_TOKEN,
+}
+
 const LINE_MESSAGING_API = 'https://api.line.me/v2/bot/message'
 const LINE_HEADER = {
   'Content-Type': 'application/json',
   Authorization: `Bearer ${LINE_CONFIG.channelAccessToken}`,
 }
 
-const capitalizeFirstLetter = (string) => {
+const capitalizeFirstLetter = (string: string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
-const randomWord = (items) => {
+const randomWord = (items: String[]) => {
   return items[Math.floor(Math.random() * items.length)]
 }
 
-const replyFlexMsg = async (event, message, altText) => {
+const replyFlexMsg = async (
+  event: IEventLine,
+  message: any,
+  altText: string,
+) => {
   try {
     const response = await axios({
       method: 'post',
@@ -39,11 +54,11 @@ const replyFlexMsg = async (event, message, altText) => {
     })
     return response
   } catch (error) {
-    return 
+    return error
   }
 }
 
-const replyMsg = async (event, message) => {
+const replyMsg = async (event: IEventLine, message: String) => {
   try {
     const response = await axios({
       method: 'post',
@@ -61,11 +76,11 @@ const replyMsg = async (event, message) => {
     })
     return response
   } catch (error) {
-    return
+    return error
   }
 }
 
-module.exports = {
+export {
   capitalizeFirstLetter,
   replyFlexMsg,
   replyMsg,
@@ -73,4 +88,5 @@ module.exports = {
   LINE_CONFIG,
   LINE_HEADER,
   LINE_MESSAGING_API,
+  LINE_CONFIG_MIDDLEWARE,
 }

@@ -1,4 +1,4 @@
-const recieveHello = [
+const recieveHello: String[] = [
   'สวัสดี',
   'ดีจ้า',
   'ดี',
@@ -20,13 +20,20 @@ const recieveHello = [
   '้ำสสน',
 ]
 
-const responseHello = ['สวัสดีนักเดินทาง อยากให้ฉันแนะนำอะไรกดที่เมนูได้เลยนะคะ', 'สวัสดีนักเดินทาง เป็นอย่างไรบ้างช่วงนี้', 'สวัสดีนักเดินทาง มีอะไรให้ฉันช่วยกดเมนูได้เลยนะ']
+const responseHello: String[] = [
+  'สวัสดีนักเดินทาง อยากให้ฉันแนะนำอะไรกดที่เมนูได้เลยนะคะ',
+  'สวัสดีนักเดินทาง เป็นอย่างไรบ้างช่วงนี้',
+  'สวัสดีนักเดินทาง มีอะไรให้ฉันช่วยกดเมนูได้เลยนะ',
+]
 
-const noAnswer = ['ฉันไม่เข้าใจที่คุณนักเดินทางพูดค่ะ', 'Katheryne ไม่เข้าใจ พูดใหม่ได้ไหมคะ']
+const noAnswer: String[] = [
+  'ฉันไม่เข้าใจที่คุณนักเดินทางพูดค่ะ',
+  'Katheryne ไม่เข้าใจ พูดใหม่ได้ไหมคะ',
+]
 
-const characters = ['test']
+const characters: String[] = ['test']
 
-const artifacts = [
+const artifacts: any[] = [
   {
     id: 'A1',
     name: 'adventurer',
@@ -193,10 +200,4 @@ const artifacts = [
   },
 ]
 
-module.exports = {
-  recieveHello,
-  responseHello,
-  artifacts,
-  noAnswer,
-  characters,
-}
+export { recieveHello, responseHello, noAnswer, characters, artifacts }
