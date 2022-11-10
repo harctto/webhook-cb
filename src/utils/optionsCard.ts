@@ -1,4 +1,6 @@
-const elements = {
+import { IOptionsCardAf } from '../types/optionsCard'
+
+const elements: any = {
   type: 'carousel',
   contents: [
     {
@@ -875,58 +877,54 @@ const weapons = {
   ],
 }
 
-const artifactsDetails = ({name, fullname}) => {
+const artifactsDetails = ({ name, fullname }: IOptionsCardAf) => {
   return {
-    "type": "bubble",
-    "size": "kilo",
-    "body": {
-      "type": "box",
-      "layout": "vertical",
-      "contents": [
+    type: 'bubble',
+    size: 'kilo',
+    body: {
+      type: 'box',
+      layout: 'vertical',
+      contents: [
         {
-          "type": "image",
-          "url": `https://api.genshin.dev/artifacts/${name}/flower-of-life`,
-          "size": "80%",
-          "aspectMode": "cover",
-          "aspectRatio": "2:3",
-          "gravity": "top"
+          type: 'image',
+          url: `https://api.genshin.dev/artifacts/${name}/circlet-of-logos`,
+          size: '80%',
+          aspectMode: 'cover',
+          aspectRatio: '2:3',
+          gravity: 'top',
         },
         {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
+          type: 'box',
+          layout: 'vertical',
+          contents: [
             {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
+              type: 'box',
+              layout: 'vertical',
+              contents: [
                 {
-                  "type": "text",
-                  "text": fullname,
-                  "size": "sm",
-                  "color": "#ffffff",
-                  "weight": "bold",
-                  "wrap": true
-                }
-              ]
-            }
+                  type: 'text',
+                  text: fullname,
+                  size: 'sm',
+                  color: '#ffffff',
+                  weight: 'bold',
+                  wrap: true,
+                },
+              ],
+            },
           ],
-          "position": "absolute",
-          "offsetBottom": "0px",
-          "offsetStart": "0px",
-          "offsetEnd": "0px",
-          "paddingAll": "10px",
-          "paddingTop": "10px",
-          "backgroundColor": "#ffffff22"
-        }
+          position: 'absolute',
+          offsetBottom: '0px',
+          offsetStart: '0px',
+          offsetEnd: '0px',
+          paddingAll: '10px',
+          paddingTop: '10px',
+          backgroundColor: '#ffffff22',
+        },
       ],
-      "paddingAll": "0px",
-      "backgroundColor": "#122556"
-    }
+      paddingAll: '0px',
+      backgroundColor: '#122556',
+    },
   }
 }
 
-module.exports = {
-  elements,
-  weapons,
-  artifactsDetails
-}
+export { elements, weapons, artifactsDetails }
