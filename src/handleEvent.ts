@@ -25,12 +25,7 @@ import {
 import { ICharacter } from './types/constant'
 
 const test = async () => {
-  if (elementsConstant.includes('anemo')) {
-    const payload = characters.filter((el) => el.elements === 'anemo')
-    const get = charactersPick(payload)
-    const get2 = await getCharacterDetail("kazuha")
-    const test = await charactersDetails(get2.data as ICharacterDetail)
-  }
+  return
 }
 
 const handleEvent = async (event: IEventLine) => {
@@ -60,7 +55,7 @@ const handleEvent = async (event: IEventLine) => {
     else if (elementsConstant.includes(event.message.text)) {
       const payload = characters.filter(
         (el) => el.elements === event.message.text,
-      ) 
+      )
       const flexMsg = charactersPick(payload)
       await replyMsg({
         event,
@@ -78,7 +73,10 @@ const handleEvent = async (event: IEventLine) => {
     else if (characters.some((item) => item.name === event.message.text)) {
       const getDetail = await getCharacterDetail(event.message.text)
       if (getDetail.data) {
-        const flexMsg = await charactersDetails(getDetail.data)
+        const flexMsg = await charactersDetails(
+          getDetail.data,
+          event.message.text,
+        )
         await pushMsg({
           type: 'flex',
           event,
@@ -88,11 +86,11 @@ const handleEvent = async (event: IEventLine) => {
         // แสดงอะไรบ้าง
         await replyMsg({
           event,
-          message: ``
+          message: ``,
         })
       }
-    }   
-    
+    }
+
     //weapons
     else if (event.message.text === 'weapons') {
       await replyMsg({

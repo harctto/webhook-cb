@@ -660,79 +660,79 @@ const weapons = [
     type: 'bow'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W15',
+    name: 'bloodtainted-greatsword',
+    type: 'claymore'
+  },
+  {
+    id: 'W16',
+    name: 'calamity-queller',
+    type: 'polearm'
+  },
+  {
+    id: 'W17',
+    name: 'cinnabar -spindle',
+    type: 'sword'
+  },
+  {
+    id: 'W18',
+    name: 'compound-bow',
+    type: 'bow'
+  },
+  {
+    id: 'W19',
+    name: 'cool-steel',
+    type: 'sword'
+  },
+  {
+    id: 'W20',
+    name: 'crescent-pike',
+    type: 'polearm'
+  },
+  {
+    id: 'W21',
+    name: 'dark-iron-sword',
+    type: 'sword'
+  },
+  {
+    id: 'W22',
+    name: 'deathmatch',
+    type: 'polearm'
+  },
+  {
+    id: 'W23',
+    name: 'debate-club',
+    type: 'claymore'
+  },
+  {
+    id: 'W24',
+    name: 'dodoco-tales',
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W25',
+    name: 'dragon-s-bane',
+    type: 'polearm'
+  },
+  {
+    id: 'W26',
+    name: 'dragonspine-spear',
+    type: 'polearm'
+  },
+  {
+    id: 'W27',
+    name: 'dull-blade',
+    type: 'sword'
+  },
+  {
+    id: 'W28',
+    name: 'eberlasting-moonglow',
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
+    id: 'W29',
+    name: 'ebony-bow',
+    type: 'bow'
   },
   {
     id: 'W3',

@@ -980,34 +980,24 @@ const weaponsType = {
   ],
 }
 
-const charactersDetails = async (data: ICharacterDetail) => {
-  let rarityArrayIcon: any[] = []
-  const rarityIcon = {
-    type: 'icon',
-    url:
-      'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
-  }
-
-  for (let index = 0; index < data.rarity; index++) {
-    rarityArrayIcon.push(rarityIcon)
-  }
-
+const charactersDetails = async (data: ICharacterDetail, urlName: string) => {
   const findColors = colors.find(
     (el) => el.element === data.vision.toLowerCase(),
   )
 
   return {
     type: 'bubble',
+    size: 'mega',
     body: {
       type: 'box',
       layout: 'vertical',
       contents: [
         {
           type: 'image',
-          url: `https://api.genshin.dev/characters/${data.name}/icon-big`,
+          url: `https://api.genshin.dev/characters/${urlName}/icon-big`,
           size: 'full',
-          aspectMode: 'cover',
-          aspectRatio: '1:1',
+          aspectMode: 'fit',
+          aspectRatio: '2:1',
           gravity: 'center',
         },
         {
@@ -1041,29 +1031,26 @@ const charactersDetails = async (data: ICharacterDetail) => {
                   contents: [
                     {
                       type: 'text',
-                      text: data.name,
-                      size: 'xl',
+                      text: data.title,
+                      size: 'sm',
                       color: '#ffffff',
                     },
                   ],
                 },
                 {
                   type: 'box',
-                  layout: 'horizontal',
+                  layout: 'vertical',
                   contents: [
                     {
                       type: 'text',
                       text: data.title,
-                      size: 'xl',
                       color: '#ffffff',
+                      size: 'xs',
+                      flex: 0,
+                      align: 'start',
+                      style: 'italic',
                     },
                   ],
-                },
-                {
-                  type: 'box',
-                  layout: 'baseline',
-                  contents: rarityArrayIcon,
-                  spacin: 'xs',
                 },
               ],
               spacing: 'xs',
@@ -1077,7 +1064,11 @@ const charactersDetails = async (data: ICharacterDetail) => {
         },
       ],
       paddingAll: '0px',
-      backgroundColor: findColors ? findColors.hex : '#ffffff',
+    },
+    styles: {
+      body: {
+        backgroundColor: findColors ? findColors.hex : '#ffffff',
+      },
     },
   }
 }
