@@ -994,10 +994,10 @@ const charactersDetails = async (data: ICharacterDetail, urlName: string) => {
       contents: [
         {
           type: 'image',
-          url: `https://api.genshin.dev/characters/${urlName}/icon-big`,
+          url: `https://api.genshin.dev/characters/${urlName}/card`,
           size: 'full',
           aspectMode: 'fit',
-          aspectRatio: '2:1',
+          aspectRatio: '2:4',
           gravity: 'center',
         },
         {
@@ -1031,7 +1031,7 @@ const charactersDetails = async (data: ICharacterDetail, urlName: string) => {
                   contents: [
                     {
                       type: 'text',
-                      text: data.title,
+                      text: data.name,
                       size: 'sm',
                       color: '#ffffff',
                     },

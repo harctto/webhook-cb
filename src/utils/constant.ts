@@ -740,6 +740,181 @@ const weapons = [
     type: 'bow'
   },
   {
+    id: 'W31',
+    name: 'emerald-orb',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
     id: 'W3',
     name: 'amber-catalyst',
     type: 'catalyst'
