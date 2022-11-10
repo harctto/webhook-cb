@@ -1,9 +1,7 @@
-import { IEventLine } from '../types/api'
-import axios from 'axios'
 import { Client } from '@line/bot-sdk'
 import { Config, Message, MiddlewareConfig } from '@line/bot-sdk/dist/types'
 import dotenv from 'dotenv'
-import { IMessagePayload, IReplyFlexMsg, IReplyMsg } from '../types/helper'
+import { IReplyFlexMsg, IReplyMsg } from '../types/helper'
 dotenv.config()
 
 const SECRET_TOKEN = process.env.SECRET_TOKEN!

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { ICharacterDetail } from '../types/api'
+import { ICharacterDetail, IWeaponDetail } from '../types/api'
 
 const getArtifact = async () => {
   try {
@@ -58,7 +58,9 @@ const getCharacter = async () => {
 
 const getCharacterDetail = async (name: string) => {
   try {
-    const res = await axios.get<ICharacterDetail>(`${process.env.API_URL}/characters/${name}`)
+    const res = await axios.get<ICharacterDetail>(
+      `${process.env.API_URL}/characters/${name}`,
+    )
     return {
       status: true,
       data: res.data,
@@ -72,4 +74,45 @@ const getCharacterDetail = async (name: string) => {
   }
 }
 
-export { getArtifact, getArtifactDetail, getCharacter, getCharacterDetail }
+const getWeapon = async () => {
+  try {
+    const res = await axios.get(`${process.env.API_URL}/weapons`)
+    return {
+      status: true,
+      data: res.data,
+    }
+  } catch (err) {
+    return {
+      status: false,
+      data: null,
+      msg: err,
+    }
+  }
+}
+
+const getWeaponDetail = async (name: string) => {
+  try {
+    const res = await axios.get<IWeaponDetail>(
+      `${process.env.API_URL}/weapons/${name}`,
+    )
+    return {
+      status: true,
+      data: res.data,
+    }
+  } catch (err) {
+    return {
+      status: false,
+      data: null,
+      msg: err,
+    }
+  }
+}
+
+export {
+  getArtifact,
+  getArtifactDetail,
+  getCharacter,
+  getCharacterDetail,
+  getWeapon,
+  getWeaponDetail,
+}

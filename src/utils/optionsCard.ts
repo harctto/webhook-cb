@@ -364,7 +364,7 @@ const elements: any = {
       action: {
         type: 'message',
         label: 'action',
-        text: 'eo',
+        text: 'geo',
       },
     },
     {
@@ -436,7 +436,7 @@ const elements: any = {
       action: {
         type: 'message',
         label: 'action',
-        text: 'Hydro',
+        text: 'hydro',
       },
     },
     {

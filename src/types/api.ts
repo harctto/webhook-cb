@@ -49,3 +49,16 @@ interface Constellation {
   level?: number
   type?: string
 }
+
+export interface IWeaponDetail {
+    name:              string;
+    type:              string;
+    rarity:            number;
+    baseAttack:        number;
+    subStat:           string;
+    passiveName:       string;
+    passiveDesc:       string;
+    location:          string;
+    ascensionMaterial: string;
+}
+

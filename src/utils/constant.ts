@@ -60,8 +60,8 @@ const responseHello: string[] = [
 ]
 
 const noAnswer: string[] = [
-  'ฉันไม่เข้าใจที่คุณนักเดินทางพูดค่ะ หากสงสัยเรื่องใด กดช่องเมนูได้นะคะ',
-  'Katheryne ไม่เข้าใจ หากสงสัยเรื่องใด กดช่องเมนูได้นะคะ',
+  'ฉันไม่เข้าใจที่คุณนักเดินทางพูดค่ะ หากสงสัยเรื่องใด กดช่องเมนูได้นะคะ 😊👍',
+  'Katheryne ไม่เข้าใจ 😵‍💫  หากสงสัยเรื่องใด กดช่องเมนูได้นะคะ 😊👍',
 ]
 const elementsConstant: string[] = [
   'anemo',
@@ -866,28 +866,28 @@ const weapons = [
   },
   {
     id: 'W56',
-    name: 'amber-catalyst',
+    name: 'lion-s-roar',
+    type: 'sword'
+  },
+  {
+    id: 'W57',
+    name: 'lithic-blade',
+    type: 'claymore'
+  },
+  {
+    id: 'W58',
+    name: 'lithic-spear',
+    type: 'polearm'
+  },
+  {
+    id: 'W59',
+    name: 'lost-prayer-to-the-sacred-winds',
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
-  },
-  {
-    id: 'W3',
-    name: 'amber-catalyst',
-    type: 'catalyst'
+    id: 'W60',
+    name: 'luxurious-sea-lord',
+    type: 'claymore'
   },
   {
     id: 'W3',
