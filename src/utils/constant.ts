@@ -1,5 +1,36 @@
 import { ICharacter } from "../types/constant"
 
+const colors: any[] = [
+  {
+    element: "anemo",
+    hex: "#74c4ac"
+  },
+  {
+    element: "cryo",
+    hex: "#ac8cc4"
+  },
+  {
+    element: "dendro",
+    hex: "#74c4ac"
+  },
+  {
+    element: "electro",
+    hex: "#ac8cc4"
+  },
+  {
+    element: "geo",
+    hex: "#74c4ac"
+  },
+  {
+    element: "hydro",
+    hex: "#74c4ac"
+  },
+  {
+    element: "pyro",
+    hex: "#74c4ac"
+  },
+]
+
 const recieveHello: string[] = [
   'สวัสดี',
   'ดีจ้า',
@@ -146,6 +177,7 @@ const characters: ICharacter[] = [
     id: 'Char19',
     name: 'jean',
     elements: 'anemo',
+    rarity: 5
   },
   {
     id: 'Char20',

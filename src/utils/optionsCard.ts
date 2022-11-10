@@ -517,20 +517,33 @@ const elements: any = {
 
 const charactersPick = (data: ICharacter[]) => {
   const mapArray = data.map((data) => {
+    const rarityArrayIcon: any[] = []
+    const rarityIcon = {
+      type: 'icon',
+      url:
+        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
+    }
+
+    if (data.rarity) {
+      for (let index = 0; index < data.rarity; index++) {
+        rarityArrayIcon.push(rarityIcon)
+      }
+    }
+
     return {
       type: 'bubble',
+      size: 'kilo',
       body: {
         type: 'box',
         layout: 'vertical',
         contents: [
           {
             type: 'image',
-            url:
-              `https://api.genshin.dev/characters/${data.name}/icon-big`,
-            size: 'full',
-            aspectMode: 'cover',
-            aspectRatio: '1:1',
+            url: `https://api.genshin.dev/characters/${data.name}/icon-big`,
+            aspectMode: 'fit',
+            aspectRatio: '2:3',
             gravity: 'center',
+            size: 'full',
           },
           {
             type: 'box',
@@ -563,7 +576,7 @@ const charactersPick = (data: ICharacter[]) => {
                     contents: [
                       {
                         type: 'text',
-                        text: 'Brown Grand Hotel',
+                        text: data.name,
                         size: 'xl',
                         color: '#ffffff',
                       },
@@ -572,38 +585,7 @@ const charactersPick = (data: ICharacter[]) => {
                   {
                     type: 'box',
                     layout: 'baseline',
-                    contents: [
-                      {
-                        type: 'icon',
-                        url:
-                          'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
-                      },
-                      {
-                        type: 'icon',
-                        url:
-                          'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
-                      },
-                      {
-                        type: 'icon',
-                        url:
-                          'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
-                      },
-                      {
-                        type: 'icon',
-                        url:
-                          'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
-                      },
-                      {
-                        type: 'icon',
-                        url:
-                          'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png',
-                      },
-                      {
-                        type: 'text',
-                        text: '4.0',
-                        color: '#a9a9a9',
-                      },
-                    ],
+                    contents: rarityArrayIcon,
                     spacing: 'xs',
                   },
                 ],
@@ -618,17 +600,13 @@ const charactersPick = (data: ICharacter[]) => {
           },
         ],
         paddingAll: '0px',
-      },
-      action: {
-        type: 'message',
-        label: 'action',
-        text: 'hello',
+        backgroundColor: '#EF7A35',
       },
     }
   })
   return {
     type: 'carousel',
-    content: mapArray,
+    contents: mapArray,
   }
 }
 

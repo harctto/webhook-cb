@@ -27,9 +27,9 @@ const test = async () => {
   if (elementsConstant.includes('anemo')) {
     const payload = characters.filter((el) => el.elements === 'anemo')
     const get = charactersPick(payload)
-    console.log(get)
   }
 }
+
 
 const handleEvent = async (event: IEventLine) => {
   if (event.message.text) {
@@ -58,7 +58,7 @@ const handleEvent = async (event: IEventLine) => {
     else if (elementsConstant.includes(event.message.text)) {
       const payload = characters.filter(
         (el) => el.elements === event.message.text,
-      )
+      ) 
       const flexMsg = charactersPick(payload)
       await replyMsg({
         event,
