@@ -364,7 +364,7 @@ const elements: any = {
       action: {
         type: 'message',
         label: 'action',
-        text: 'Geo',
+        text: 'geo',
       },
     },
     {
@@ -537,7 +537,7 @@ const charactersPick = (data: ICharacter[]) => {
         contents: [
           {
             type: 'image',
-            url: `https://api.genshin.dev/characters/${data.name}/icon-big`,
+            url: `https://api.genshin.dev/characters/${data.name}}/${data.name.includes("traveler") ? 'portrait' : 'icon-big'}`,
             aspectMode: 'fit',
             aspectRatio: '2:3',
             gravity: 'center',

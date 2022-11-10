@@ -7,7 +7,7 @@ const colors: IHexColor[] = [
   },
   {
     element: "cryo",
-    hex: "#ec7c3c"
+    hex: "#9cd4e4"
   },
   {
     element: "dendro",
@@ -19,7 +19,7 @@ const colors: IHexColor[] = [
   },
   {
     element: "geo",
-    hex: "#74c4ac"
+    hex: "#fcb43c"
   },
   {
     element: "hydro",
@@ -27,7 +27,7 @@ const colors: IHexColor[] = [
   },
   {
     element: "pyro",
-    hex: "#fcb43c"
+    hex: "#ec7c3c"
   },
 ]
 
@@ -253,7 +253,7 @@ const characters: ICharacter[] = [
   },
   {
     id: 'Char29',
-    name: 'nolle',
+    name: 'noelle',
     elements: 'geo',
     rarity: 4,
   },
