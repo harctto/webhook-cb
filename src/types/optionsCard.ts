@@ -6,6 +6,7 @@ export interface IOptionsCardAf {
 export interface IOptionsCardChar {
   name: string
   displayName: string
+  rarity: number
 }
 
 export interface IOptionsCardChars {

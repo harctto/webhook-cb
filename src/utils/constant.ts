@@ -1,17 +1,17 @@
-import { ICharacter } from "../types/constant"
+import { ICharacter, IHexColor } from "../types/constant"
 
-const colors: any[] = [
+const colors: IHexColor[] = [
   {
     element: "anemo",
     hex: "#74c4ac"
   },
   {
     element: "cryo",
-    hex: "#ac8cc4"
+    hex: "#ec7c3c"
   },
   {
     element: "dendro",
-    hex: "#74c4ac"
+    hex: "#a4cc44"
   },
   {
     element: "electro",
@@ -23,11 +23,11 @@ const colors: any[] = [
   },
   {
     element: "hydro",
-    hex: "#74c4ac"
+    hex: "#4cccf8"
   },
   {
     element: "pyro",
-    hex: "#74c4ac"
+    hex: "#fcb43c"
   },
 ]
 
@@ -87,91 +87,109 @@ const characters: ICharacter[] = [
     id: 'Char1',
     name: 'albedo',
     elements: 'geo',
+    rarity: 5,
   },
   {
     id: 'Char2',
     name: 'aloy',
     elements: 'cryo',
+    rarity: 5,
   },
   {
     id: 'Char3',
     name: 'amber',
     elements: 'pyro',
+    rarity: 4,
   },
   {
     id: 'Char4',
     name: 'arataki-itto',
     elements: 'geo',
+    rarity: 5,
   },
   {
     id: 'Char5',
     name: 'ayaka',
     elements: 'cryo',
+    rarity: 5,
   },
   {
     id: 'Char6',
     name: 'ayato',
     elements: 'hydro',
+    rarity: 5,
   },
   {
     id: 'Char7',
     name: 'barbara',
     elements: 'hydro',
+    rarity: 4,
   },
   {
     id: 'Char8',
     name: 'beidou',
     elements: 'electro',
+    rarity: 4,
   },
   {
     id: 'Char9',
     name: 'bennett',
     elements: 'pyro',
+    rarity: 4,
   },
   {
     id: 'Char10',
     name: 'chongyun',
     elements: 'cryo',
+    rarity: 4,
   },
   {
     id: 'Char11',
     name: 'collei',
     elements: 'dendro',
+    rarity: 4,
   },
   {
     id: 'Char12',
     name: 'diluc',
     elements: 'pyro',
+    rarity: 5,
   },
   {
     id: 'Char13',
     name: 'diona',
     elements: 'cryo',
+    rarity: 4,
   },
   {
     id: 'Char14',
     name: 'eula',
     elements: 'cryo',
+    rarity: 5,
   },
   {
     id: 'Char15',
     name: 'fischl',
     elements: 'electro',
+    rarity: 4,
   },
   {
     id: 'Char16',
     name: 'ganyu',
     elements: 'cryo',
+    rarity: 5,
   },
   {
     id: 'Char17',
     name: 'gorou',
     elements: 'geo',
+    rarity: 4,
   },
   {
     id: 'Char18',
     name: 'hu-tao',
     elements: 'pyro',
+    rarity: 5,
   },
   {
     id: 'Char19',
@@ -183,186 +201,223 @@ const characters: ICharacter[] = [
     id: 'Char20',
     name: 'keaya',
     elements: 'cyro',
+    rarity: 4,
   },
   {
     id: 'Char21',
     name: 'kazuha',
     elements: 'anemo',
+    rarity: 5,
   },
   {
     id: 'Char22',
     name: 'keqing',
     elements: 'electro',
+    rarity: 5,
   },
   {
     id: 'Char23',
     name: 'klee',
     elements: 'pyro',
+    rarity: 5,
   },
   {
     id: 'Char24',
     name: 'kokomi',
     elements: 'hydro',
+    rarity: 5,
   },
   {
     id: 'char25',
     name: 'kuki-shinobu',
     elements: 'electro',
+    rarity: 4,
   },
   {
     id: 'Char26',
     name: 'lisa',
     elements: 'electro',
+    rarity: 4,
   },
   {
     id: 'Char27',
     name: 'mona',
     elements: 'hydro',
+    rarity: 5,
   },
   {
     id: 'Char28',
     name: 'ningguang',
     elements: 'geo',
+    rarity: 4,
   },
   {
     id: 'Char29',
     name: 'nolle',
     elements: 'geo',
+    rarity: 4,
   },
   {
     id: 'Char30',
     name: 'qiqi',
     elements: 'cryo',
+    rarity: 5,
   },
   {
     id: 'Char31',
     name: 'raiden',
     elements: 'electro',
+    rarity: 5,
   },
   {
     id: 'Char32',
     name: 'razor',
     elements: 'electro',
+    rarity: 4,
   },
   {
     id: 'Char33',
     name: 'rosaria',
     elements: 'cryo',
+    rarity: 4,
   },
   {
     id: 'Char34',
     name: 'sara',
     elements: 'electro',
+    rarity: 4,
   },
   {
     id: 'Char35',
     name: 'sayu',
     elements: 'anemo',
+    rarity: 4,
   },
   {
     id: 'Char36',
     name: 'shenhe',
     elements: 'cryo',
+    rarity: 5,
   },
   {
     id: 'Char37',
     name: 'shikanoin-heizou',
     elements: 'anemo',
+    rarity: 4,
   },
   {
     id: 'Char38',
     name: 'surcrose',
     elements: 'anemo',
+    rarity: 4,
   },
   {
     id: 'Char39',
     name: 'tartaglia',
     elements: 'hydro',
+    rarity: 5,
   },
   {
     id: 'Char40',
     name: 'thoma',
-    elements: 'pyro'
+    elements: 'pyro',
+    rarity: 4,
   },
   {
     id: 'Char41',
     name: 'tighnari',
     elements: 'dendro',
+    rarity: 5,
   },
   {
     id: 'Char42',
     name: 'traveler-anemo',
     elements: 'anemo',
+    rarity: 5,
   },
   {
     id: 'Char43',
     name: 'traveler-dendro',
     elements: 'dendro',
+    rarity: 5,
   },
   {
     id: 'Char44',
     name: 'traveler-electro',
     elements: 'electro',
+    rarity: 5,
   },
   {
     id: 'Char45',
     name: 'traveler-geo',
     elements: 'geo',
+    rarity: 5,
   },
   {
     id: 'Char46',
     name: 'venti',
     elements: 'anemo',
+    rarity: 5,
   },
   {
     id: 'Char47',
     name: 'xiangling',
     elements: 'pyro',
+    rarity: 4,
   },
   {
     id: 'Char48',
     name: 'xiao',
     elements: 'anemo',
+    rarity: 5,
   },
   {
     id: 'Char49',
     name: 'xingqiu',
     elements: 'hydro',
+    rarity: 4,
   },
   {
     id: 'Char50',
     name: 'xinyan',
     elements: 'pyro',
+    rarity: 4,
   },
   {
     id: 'Char51',
     name: 'yae-miko',
     elements: 'electro',
+    rarity: 5,
   },
   {
     id: 'Char52',
     name: 'yanfei',
     elements: 'pyro',
+    rarity: 4,
   },
   {
     id: 'Char53',
     name: 'yelan',
     elements: 'hydro',
+    rarity: 5,
   },
   {
     id: 'Char54',
     name: 'yoimiya',
     elements: 'pyro',
+    rarity: 5,
   },
   {
     id: 'Char55',
     name: 'yun-jin',
     elements: 'geo',
+    rarity: 4,
   },
   {
     id: 'Char56',
     name: 'zhongli',
     elements: 'geo',
+    rarity: 5,
   },
 ]
 
@@ -537,20 +592,168 @@ const weapons = [
   {
     id: 'W1',
     name: 'akuoumaru',
-    type: 'Claymore'
+    type: 'claymore'
   },
   {
     id: 'W2',
     name: 'alley-hunter',
-    type: 'Bow'
+    type: 'bow'
   },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W4',
+    name: 'amenoma-kageuchi',
+    type: 'sword'
+  },
+  {
+    id: 'W5',
+    name: 'amos-bow',
+    type: 'bow'
+  },
+  {
+    id: 'W6',
+    name: 'apprentice-s-notes',
+    type: 'catalyst'
+  },
+  {
+    id: 'W7',
+    name: 'aquila-favonia',
+    type: 'sword'
+  },
+  {
+    id: 'W8',
+    name: 'beginner-s-protector',
+    type: 'polearm'
+  },
+  {
+    id: 'W9',
+    name: 'black-tassel',
+    type: 'polearm'
+  },
+  {
+    id: 'W10',
+    name: 'blackcliff-amulet',
+    type: 'catalyst'
+  },
+  {
+    id: 'W11',
+    name: 'blackcliff-longsword',
+    type: 'sword'
+  },
+  {
+    id: 'W12',
+    name: 'blackcliff-pole',
+    type: 'polearm'
+  },
+  {
+    id: 'W13',
+    name: 'blackcliff-slasher',
+    type: 'claymore'
+  },
+  {
+    id: 'W14',
+    name: 'blackcliff-warbow',
+    type: 'bow'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+  {
+    id: 'W3',
+    name: 'amber-catalyst',
+    type: 'catalyst'
+  },
+
 ]
 
 export {
+  colors,
   recieveHello,
   responseHello,
   noAnswer,
   elementsConstant,
+  typeConstant,
   characters,
   artifacts,
   weapons,

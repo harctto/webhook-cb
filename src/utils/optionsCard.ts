@@ -1,9 +1,8 @@
+import { ICharacterDetail } from '../types/api'
 import { ICharacter } from '../types/constant'
-import {
-  IOptionsCardAf,
-  IOptionsCardChars,
-  IOptionsCardChar,
-} from '../types/optionsCard'
+import { IOptionsCardAf, IOptionsCardChar } from '../types/optionsCard'
+import { colors } from './constant'
+import { capitalizeFirstLetter } from './helper'
 
 const elements: any = {
   type: 'carousel',
@@ -523,12 +522,11 @@ const charactersPick = (data: ICharacter[]) => {
       url:
         'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
     }
-
-    if (data.rarity) {
-      for (let index = 0; index < data.rarity; index++) {
-        rarityArrayIcon.push(rarityIcon)
-      }
+    for (let index = 0; index < data.rarity; index++) {
+      rarityArrayIcon.push(rarityIcon)
     }
+
+    const findColors = colors.find((el) => el.element === data.elements)
 
     return {
       type: 'bubble',
@@ -576,7 +574,7 @@ const charactersPick = (data: ICharacter[]) => {
                     contents: [
                       {
                         type: 'text',
-                        text: data.name,
+                        text: capitalizeFirstLetter(data.name),
                         size: 'xl',
                         color: '#ffffff',
                       },
@@ -600,7 +598,12 @@ const charactersPick = (data: ICharacter[]) => {
           },
         ],
         paddingAll: '0px',
-        backgroundColor: '#EF7A35',
+        backgroundColor: findColors ? findColors.hex : '#ffffff',
+      },
+      action: {
+        type: 'message',
+        label: 'action',
+        text: data.name,
       },
     }
   })
@@ -977,7 +980,22 @@ const weaponsType = {
   ],
 }
 
-const charactersDetails = ({ name, displayName }: IOptionsCardChar) => {
+const charactersDetails = async (data: ICharacterDetail) => {
+  let rarityArrayIcon: any[] = []
+  const rarityIcon = {
+    type: 'icon',
+    url:
+      'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
+  }
+
+  for (let index = 0; index < data.rarity; index++) {
+    rarityArrayIcon.push(rarityIcon)
+  }
+
+  const findColors = colors.find(
+    (el) => el.element === data.vision.toLowerCase(),
+  )
+
   return {
     type: 'bubble',
     body: {
@@ -986,7 +1004,7 @@ const charactersDetails = ({ name, displayName }: IOptionsCardChar) => {
       contents: [
         {
           type: 'image',
-          url: `https://api.genshin.dev/characters/${name}/icon-big`,
+          url: `https://api.genshin.dev/characters/${data.name}/icon-big`,
           size: 'full',
           aspectMode: 'cover',
           aspectRatio: '1:1',
@@ -1023,7 +1041,19 @@ const charactersDetails = ({ name, displayName }: IOptionsCardChar) => {
                   contents: [
                     {
                       type: 'text',
-                      text: displayName,
+                      text: data.name,
+                      size: 'xl',
+                      color: '#ffffff',
+                    },
+                  ],
+                },
+                {
+                  type: 'box',
+                  layout: 'horizontal',
+                  contents: [
+                    {
+                      type: 'text',
+                      text: data.title,
                       size: 'xl',
                       color: '#ffffff',
                     },
@@ -1032,39 +1062,7 @@ const charactersDetails = ({ name, displayName }: IOptionsCardChar) => {
                 {
                   type: 'box',
                   layout: 'baseline',
-                  // ตรงนี้เป็น mock up ดาว
-                  contents: [
-                    {
-                      type: 'icon',
-                      url:
-                        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
-                    },
-                    {
-                      type: 'icon',
-                      url:
-                        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
-                    },
-                    {
-                      type: 'icon',
-                      url:
-                        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
-                    },
-                    {
-                      type: 'icon',
-                      url:
-                        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
-                    },
-                    {
-                      type: 'icon',
-                      url:
-                        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png',
-                    },
-                    {
-                      type: 'text',
-                      text: '4.0',
-                      color: '#a9a9a9',
-                    },
-                  ],
+                  contents: rarityArrayIcon,
                   spacin: 'xs',
                 },
               ],
@@ -1079,6 +1077,7 @@ const charactersDetails = ({ name, displayName }: IOptionsCardChar) => {
         },
       ],
       paddingAll: '0px',
+      backgroundColor: findColors ? findColors.hex : '#ffffff',
     },
   }
 }

@@ -17,6 +17,7 @@ import { randomWord, pushMsg, replyMsg } from './utils/helper'
 import { ICharacterDetail, IEventLine } from './types/api'
 import {
   artifactsDetails,
+  charactersDetails,
   charactersPick,
   elements,
   weaponsType,
@@ -27,9 +28,10 @@ const test = async () => {
   if (elementsConstant.includes('anemo')) {
     const payload = characters.filter((el) => el.elements === 'anemo')
     const get = charactersPick(payload)
+    const get2 = await getCharacterDetail("kazuha")
+    const test = await charactersDetails(get2.data as ICharacterDetail)
   }
 }
-
 
 const handleEvent = async (event: IEventLine) => {
   if (event.message.text) {
@@ -71,6 +73,25 @@ const handleEvent = async (event: IEventLine) => {
         altText: 'เลือกตัวละครได้เลย',
       })
     }
+
+    //characters details
+    else if (characters.some((item) => item.name === event.message.text)) {
+      const getDetail = await getCharacterDetail(event.message.text)
+      if (getDetail.data) {
+        const flexMsg = await charactersDetails(getDetail.data)
+        await pushMsg({
+          type: 'flex',
+          event,
+          message: flexMsg,
+          altText: getDetail.data.name,
+        })
+        // แสดงอะไรบ้าง
+        await replyMsg({
+          event,
+          message: ``
+        })
+      }
+    }   
     
     //weapons
     else if (event.message.text === 'weapons') {
