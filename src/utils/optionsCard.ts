@@ -887,7 +887,7 @@ const artifactsDetails = ({ name, fullname }: IOptionsCardAf) => {
       contents: [
         {
           type: 'image',
-          url: `https://api.genshin.dev/artifacts/${name}/flower-of-life`,
+          url: `https://api.genshin.dev/artifacts/${name}/circlet-of-logos`,
           size: '80%',
           aspectMode: 'cover',
           aspectRatio: '2:3',

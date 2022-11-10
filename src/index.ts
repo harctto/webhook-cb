@@ -78,11 +78,15 @@ const handleEvent = async (event: IEventLine) => {
         `Artifact ที่คุณนักเดินทางขอ ชื่อ ${data.name}
 ซึ่งมีระดับความหายากมากที่สุด ${data.max_rarity} ดาว
 ---------------------------
-เมื่อใส่เซ็ต 2 ชิ้นจะมีผลดังนี้ :
+${data['2-piece_bonus'] && data['4-piece_bonus'] ? 
+`เมื่อใส่เซ็ต 2 ชิ้นจะมีผลดังนี้ :
   ${data['2-piece_bonus']}
 ---------------------------
 เมื่อใส่เซ็ต 4 ชิ้นจะมีผลดังนี้ :
-  ${data['4-piece_bonus']}`,
+  ${data['4-piece_bonus']}` : 
+`เมื่อใส่เซ็ต 1 ชิ้นจะมีผลดังนี้ :
+  ${data['1-piece_bonus']}` }
+`,
       )
     }
     //no-text
