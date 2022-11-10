@@ -996,7 +996,7 @@ const charactersDetails = async (data: ICharacterDetail, urlName: string) => {
           type: 'image',
           url: `https://api.genshin.dev/characters/${urlName}/card`,
           size: 'full',
-          aspectMode: 'fit',
+          aspectMode: 'cover',
           aspectRatio: '2:4',
           gravity: 'center',
         },
