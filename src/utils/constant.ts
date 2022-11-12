@@ -1076,33 +1076,40 @@ const weapons: IWeapon[] = [
   {
     id: 'W95',
     name: 'sacrificial-greatsword',
-    type: 'sword',
+    type: 'claymore',
     rarity: 4
   },
   {
     id: 'W96',
-    name: 'royal-longsword',
+    name: 'sacrificial-sword',
     type: 'sword',
     rarity: 4
   },
   {
     id: 'W97',
-    name: 'royal-longsword',
-    type: 'sword',
-    rarity: 4
+    name: 'seasoned-hunter-s-bow',
+    type: 'bow',
+    rarity: 2
   },
   {
     id: 'W98',
-    name: 'royal-longsword',
-    type: 'sword',
+    name: 'serpent-spine',
+    type: 'claymore',
     rarity: 4
   },
   {
     id: 'W99',
-    name: 'royal-longsword',
-    type: 'sword',
-    rarity: 4
+    name: 'sharpshooter-s-oath',
+    type: 'bow',
+    rarity: 3
   },
+  {
+    id: 'W100',
+    name: 'sharpshooter-s-oath',
+    type: 'bow',
+    rarity: 3
+  },
+  
 
 ]
 
