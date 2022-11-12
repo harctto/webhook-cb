@@ -969,25 +969,139 @@ const weapons: IWeapon[] = [
     id: 'W76',
     name: 'prototype-archaic',
     type: 'claymore',
-    rarity: 5
+    rarity: 4
   },
   {
     id: 'W77',
-    name: 'amber-catalyst',
-    type: 'catalyst',
-    rarity: 5
+    name: 'prototype-crescent',
+    type: 'bow',
+    rarity: 4
   },
   {
     id: 'W78',
-    name: 'amber-catalyst',
+    name: 'prototype-grudge',
     type: 'catalyst',
-    rarity: 5
+    rarity: 4
   },
   {
     id: 'W79',
-    name: 'amber-catalyst',
+    name: 'prototype-malice',
     type: 'catalyst',
+    rarity: 4
+  },
+  {
+    id: 'W80',
+    name: 'prototype-rancour',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W81',
+    name: 'quartz',
+    type: 'claymore',
+    rarity: 3
+  },
+  {
+    id: 'W82',
+    name: 'rainslasher',
+    type: 'claymore',
+    rarity: 4
+  },
+  {
+    id: 'W83',
+    name: 'raven-bow',
+    type: 'bow',
+    rarity: 3
+  },
+  {
+    id: 'W85',
+    name: 'recurve-bow',
+    type: 'bow',
+    rarity: 3
+  },
+  {
+    id: 'W86',
+    name: 'redhorn-stonethresher',
+    type: 'claymore',
     rarity: 5
+  },
+  {
+    id: 'W87',
+    name: 'royal-bow',
+    type: 'bow',
+    rarity: 4
+  },
+  {
+    id: 'W88',
+    name: 'royal-greatsword',
+    type: 'claymore',
+    rarity: 4
+  },
+  {
+    id: 'W89',
+    name: 'royal-grimoire',
+    type: 'catalyst',
+    rarity: 4
+  },
+  {
+    id: 'W90',
+    name: 'royal-longsword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W91',
+    name: 'royal-spear',
+    type: 'polearm',
+    rarity: 4
+  },
+  {
+    id: 'W92',
+    name: 'rust',
+    type: 'bow',
+    rarity: 4
+  },
+  {
+    id: 'W93',
+    name: 'sacrificial-bow',
+    type: 'bow',
+    rarity: 4
+  },
+  {
+    id: 'W94',
+    name: 'sacrificial-fragments',
+    type: 'catalyst',
+    rarity: 4
+  },
+  {
+    id: 'W95',
+    name: 'sacrificial-greatsword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W96',
+    name: 'royal-longsword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W97',
+    name: 'royal-longsword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W98',
+    name: 'royal-longsword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W99',
+    name: 'royal-longsword',
+    type: 'sword',
+    rarity: 4
   },
 
 ]

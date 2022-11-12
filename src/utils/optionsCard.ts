@@ -17,7 +17,8 @@ const elements: any = {
         contents: [
           {
             type: 'image',
-            url: 'https://api.genshin.dev/elements/anemo/icon',
+            url:
+              'https://static.wikia.nocookie.net/gensin-impact/images/1/10/Element_Anemo.svg',
             size: 'full',
             aspectMode: 'cover',
             aspectRatio: '1:1',
@@ -90,7 +91,8 @@ const elements: any = {
         contents: [
           {
             type: 'image',
-            url: 'https://api.genshin.dev/elements/cryo/icon',
+            url:
+              'https://static.wikia.nocookie.net/gensin-impact/images/7/72/Element_Cryo.svg',
             size: 'full',
             aspectMode: 'cover',
             aspectRatio: '1:1',
@@ -163,7 +165,8 @@ const elements: any = {
         contents: [
           {
             type: 'image',
-            url: 'https://api.genshin.dev/elements/dendro/icon',
+            url:
+              'https://static.wikia.nocookie.net/gensin-impact/images/7/73/Element_Dendro.svg',
             size: 'full',
             aspectMode: 'cover',
             aspectRatio: '1:1',
@@ -236,7 +239,8 @@ const elements: any = {
         contents: [
           {
             type: 'image',
-            url: 'https://api.genshin.dev/elements/electro/icon',
+            url:
+              'https://static.wikia.nocookie.net/gensin-impact/images/f/ff/Element_Electro.svg',
             size: 'full',
             aspectMode: 'cover',
             aspectRatio: '1:1',
@@ -309,7 +313,8 @@ const elements: any = {
         contents: [
           {
             type: 'image',
-            url: 'https://api.genshin.dev/elements/geo/icon',
+            url:
+              'https://static.wikia.nocookie.net/gensin-impact/images/9/9b/Element_Geo.svg',
             size: 'full',
             aspectMode: 'cover',
             aspectRatio: '1:1',
@@ -382,7 +387,8 @@ const elements: any = {
         contents: [
           {
             type: 'image',
-            url: 'https://api.genshin.dev/elements/hydro/icon',
+            url:
+              'https://static.wikia.nocookie.net/gensin-impact/images/8/80/Element_Hydro.svg',
             size: 'full',
             aspectMode: 'cover',
             aspectRatio: '1:1',
@@ -455,7 +461,8 @@ const elements: any = {
         contents: [
           {
             type: 'image',
-            url: 'https://api.genshin.dev/elements/pyro/icon',
+            url:
+              'https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Element_Pyro.svg',
             size: 'full',
             aspectMode: 'cover',
             aspectRatio: '1:1',
