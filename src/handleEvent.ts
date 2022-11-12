@@ -27,7 +27,13 @@ import {
 import { ICharacter } from './types/constant'
 
 const test = async () => {
-  return
+  const payload = weapons.filter(
+    (el) => el.type === "sword",
+  )
+  
+  console.log(`เลือกอาวุธประเภท ${""} ได้เลยค่ะ`,`${payload.map((data) => {
+    return `\n ${data.id} : ${data.name}`
+  })}`)
 }
 
 const handleEvent = async (event: IEventLine) => {
@@ -134,22 +140,22 @@ ${getDetail.data.description}`,
       const payload = weapons.filter(
         (el) => el.type === event.message.text,
       )
-      const flexMsg = weaponsPick(payload)
+
       await replyMsg({
         event,
-        message: 'เลือกอาวุธได้เลยค่ะ 😊',
-      })
-      await pushMsg({
-        type: 'flex',
-        event,
-        message: flexMsg,
-        altText: 'เลือกอาวุธได้เลยค่ะ 😊',
+        isMulti: true,
+        multiMessage: [`เลือกอาวุธประเภท ${event.message.text} ได้เลยค่ะ`,`${payload.map((data) => {
+          return `\n ${data.id} : ${data.name}`
+        })}`],
       })
     }
 
     //weapons details
-    else if (weapons.some((item) => item.name === event.message.text)) {
-      
+    else if (weapons.some((item) => item.id === event.message.text)) {
+      await replyMsg({
+        event,
+        message: "test",
+      })
     }
 
     //artifacts

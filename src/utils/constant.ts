@@ -1014,100 +1014,280 @@ const weapons: IWeapon[] = [
     rarity: 3
   },
   {
-    id: 'W85',
+    id: 'W84',
     name: 'recurve-bow',
     type: 'bow',
     rarity: 3
   },
   {
-    id: 'W86',
+    id: 'W85',
     name: 'redhorn-stonethresher',
     type: 'claymore',
     rarity: 5
   },
   {
-    id: 'W87',
+    id: 'W86',
     name: 'royal-bow',
     type: 'bow',
     rarity: 4
   },
   {
-    id: 'W88',
+    id: 'W87',
     name: 'royal-greatsword',
     type: 'claymore',
     rarity: 4
   },
   {
-    id: 'W89',
+    id: 'W88',
     name: 'royal-grimoire',
     type: 'catalyst',
     rarity: 4
   },
   {
-    id: 'W90',
+    id: 'W89',
     name: 'royal-longsword',
     type: 'sword',
     rarity: 4
   },
   {
-    id: 'W91',
+    id: 'W90',
     name: 'royal-spear',
     type: 'polearm',
     rarity: 4
   },
   {
-    id: 'W92',
+    id: 'W91',
     name: 'rust',
     type: 'bow',
     rarity: 4
   },
   {
-    id: 'W93',
+    id: 'W92',
     name: 'sacrificial-bow',
     type: 'bow',
     rarity: 4
   },
   {
-    id: 'W94',
+    id: 'W93',
     name: 'sacrificial-fragments',
     type: 'catalyst',
     rarity: 4
   },
   {
-    id: 'W95',
+    id: 'W94',
     name: 'sacrificial-greatsword',
     type: 'claymore',
     rarity: 4
   },
   {
-    id: 'W96',
+    id: 'W95',
     name: 'sacrificial-sword',
     type: 'sword',
     rarity: 4
   },
   {
-    id: 'W97',
+    id: 'W96',
     name: 'seasoned-hunter-s-bow',
     type: 'bow',
     rarity: 2
   },
   {
-    id: 'W98',
+    id: 'W97',
     name: 'serpent-spine',
     type: 'claymore',
     rarity: 4
   },
   {
-    id: 'W99',
+    id: 'W98',
     name: 'sharpshooter-s-oath',
     type: 'bow',
     rarity: 3
   },
   {
+    id: 'W99',
+    name: 'silver-sword',
+    type: 'sword',
+    rarity: 2
+  },
+  {
     id: 'W100',
-    name: 'sharpshooter-s-oath',
+    name: 'silver-sword',
+    type: 'sword',
+    rarity: 2
+  },
+  {
+    id: 'W101',
+    name: 'silver-sword',
+    type: 'sword',
+    rarity: 2
+  },
+  {
+    id: 'W102',
+    name: 'skyrider-greatsword',
+    type: 'claymore',
+    rarity: 3
+  },
+  {
+    id: 'W103',
+    name: 'skyrider-sword',
+    type: 'sword',
+    rarity: 3
+  },
+  {
+    id: 'W104',
+    name: 'skyward-atlas',
+    type: 'catalyst',
+    rarity: 5
+  },
+  {
+    id: 'W105',
+    name: 'skyward-blade',
+    type: 'sword',
+    rarity: 5
+  },
+  {
+    id: 'W106',
+    name: 'skyward-harp',
+    type: 'catalyst',
+    rarity: 5
+  },
+  {
+    id: 'W107',
+    name: 'skyward-pride',
+    type: 'claymore',
+    rarity: 5
+  },
+  {
+    id: 'W108',
+    name: 'skyward-spine',
+    type: 'polearm',
+    rarity: 5
+  },
+  {
+    id: 'W109',
+    name: 'skyward-spine',
+    type: 'polearm',
+    rarity: 5
+  },
+  {
+    id: 'W110',
+    name: 'slingshot',
     type: 'bow',
     rarity: 3
+  },
+  {
+    id: 'W111',
+    name: 'snow-tombed-starsilver',
+    type: 'claymore',
+    rarity: 4
+  },
+  {
+    id: 'W112',
+    name: 'solar-pearl',
+    type: 'catalyst',
+    rarity: 5
+  },
+  {
+    id: 'W113',
+    name: 'song-of-broken-pines',
+    type: 'claymore',
+    rarity: 5
+  },
+  {
+    id: 'W114',
+    name: 'staff-of-homa',
+    type: 'polearm',
+    rarity: 5
+  },
+  {
+    id: 'W115',
+    name: 'summit-shaper',
+    type: 'sword',
+    rarity: 5
+  },
+  {
+    id: 'W116',
+    name: 'sword-of-descension',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W117',
+    name: 'the-alley-flash',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W118',
+    name: 'the-bell',
+    type: 'claymore',
+    rarity: 4
+  },
+  {
+    id: 'W119',
+    name: 'the-black-sword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W120',
+    name: 'the-catch',
+    type: 'polearm',
+    rarity: 4
+  },
+  {
+    id: 'W121',
+    name: 'the-black-sword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W12',
+    name: 'the-black-sword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W12',
+    name: 'the-black-sword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W12',
+    name: 'the-black-sword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W12',
+    name: 'the-black-sword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W12',
+    name: 'the-black-sword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W12',
+    name: 'the-black-sword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W12',
+    name: 'the-black-sword',
+    type: 'sword',
+    rarity: 4
+  },
+  {
+    id: 'W12',
+    name: 'the-black-sword',
+    type: 'sword',
+    rarity: 4
   },
   
 
