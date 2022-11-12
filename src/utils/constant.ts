@@ -1,4 +1,4 @@
-import { ICharacter, IHexColor } from "../types/constant"
+import { ICharacter, IHexColor, IWeapon } from "../types/constant"
 
 const colors: IHexColor[] = [
   {
@@ -73,7 +73,7 @@ const elementsConstant: string[] = [
 ]
 
 //ประเภทอาวุธ
-const typeConstant: string[] = [
+const weaponConstant: string[] = [
   'sword',
   'claymore',
   'polearm',
@@ -587,7 +587,7 @@ const artifacts: any[] = [
   },
 ]
 
-const weapons = [
+const weapons: IWeapon[] = [
   {
     id: 'W1',
     name: 'akuoumaru',
@@ -889,34 +889,105 @@ const weapons = [
     type: 'claymore'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W61',
+    name: 'magic-guide',
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W62',
+    name: 'mappa-mare',
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W63',
+    name: 'memory-of-dust',
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W64',
+    name: 'messenger',
+    type: 'Bow'
+  },
+  {
+    id: 'W65',
+    name: 'mistsplitter-reforged',
+    type: 'sword'
+  },
+  {
+    id: 'W66',
+    name: 'mitternachts-waltz',
+    type: 'bow'
+  },
+  {
+    id: 'W67',
+    name: `mouun's-moon`,
+    type: 'bow'
+  },
+  {
+    id: 'W68',
+    name: 'oathsworn-eye',
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W69',
+    name: 'old-merc-s-pal',
+    type: 'claymore'
+  },
+  {
+    id: 'W70',
+    name: 'otherworldly-story',
     type: 'catalyst'
   },
   {
-    id: 'W3',
-    name: 'amber-catalyst',
+    id: 'W71',
+    name: 'pocket-grimoire',
     type: 'catalyst'
+  },
+  {
+    id: 'W72',
+    name: 'polar-star',
+    type: 'bow'
+  },
+  {
+    id: 'W73',
+    name: 'predator',
+    type: 'bow'
+  },
+  {
+    id: 'W74',
+    name: 'primordial-jade-cutter',
+    type: 'sword',
+    rarity: 5
+  },
+  {
+    id: 'W75',
+    name: 'primordial-jade-winged-spear',
+    type: 'polearm',
+    rarity: 5
+  },
+  {
+    id: 'W76',
+    name: 'prototype-archaic',
+    type: 'claymore',
+    rarity: 5
+  },
+  {
+    id: 'W77',
+    name: 'amber-catalyst',
+    type: 'catalyst',
+    rarity: 5
+  },
+  {
+    id: 'W78',
+    name: 'amber-catalyst',
+    type: 'catalyst',
+    rarity: 5
+  },
+  {
+    id: 'W79',
+    name: 'amber-catalyst',
+    type: 'catalyst',
+    rarity: 5
   },
 
 ]
@@ -927,7 +998,7 @@ export {
   responseHello,
   noAnswer,
   elementsConstant,
-  typeConstant,
+  weaponConstant,
   characters,
   artifacts,
   weapons,

@@ -6,6 +6,7 @@ import {
   characters,
   elementsConstant,
   weapons,
+  weaponConstant,
 } from './utils/constant'
 import {
   getArtifact,
@@ -20,6 +21,7 @@ import {
   charactersDetails,
   charactersPick,
   elements,
+  weaponsPick,
   weaponsType,
 } from './utils/optionsCard'
 import { ICharacter } from './types/constant'
@@ -97,15 +99,15 @@ const handleEvent = async (event: IEventLine) => {
 ใช้อาวุธประเภท: ${getDetail.data.weapon}
                 
 ${getDetail.data.description}`,
-                `สามารถมีดังนี้
-👊🏻 โจมตีปกติ: (ชื่อท่า)
-  (อธิบาย)
-                
-✨ สกิลธาตุ: (ชื่อท่า)
-  (อธิบาย)
-                
-🔥 ท่าไม้ตาย: (ชื่อท่า)
-  (อธิบาย)`,
+                `ความสามารถมีดังนี้
+👊🏻 โจมตีปกติ: ${getDetail.data.skillTalents[0].name}
+  ${getDetail.data.skillTalents[0].description}
+
+✨ สกิลธาตุ: ${getDetail.data.skillTalents[1].name}
+  ${getDetail.data.skillTalents[1].description}     
+
+🔥 ท่าไม้ตาย: ${getDetail.data.skillTalents[2].name}
+  ${getDetail.data.skillTalents[2].description}`,
               ],
             })
           },1000)
@@ -126,7 +128,29 @@ ${getDetail.data.description}`,
         altText: 'เลือกประเภทของอาวุธได้เลยค่ะ',
       })
     }
+
     //weapons list
+    else if (weaponConstant.includes(event.message.text)) {
+      const payload = weapons.filter(
+        (el) => el.type === event.message.text,
+      )
+      const flexMsg = weaponsPick(payload)
+      await replyMsg({
+        event,
+        message: 'เลือกอาวุธได้เลยค่ะ 😊',
+      })
+      await pushMsg({
+        type: 'flex',
+        event,
+        message: flexMsg,
+        altText: 'เลือกอาวุธได้เลยค่ะ 😊',
+      })
+    }
+
+    //weapons details
+    else if (weapons.some((item) => item.name === event.message.text)) {
+      
+    }
 
     //artifacts
     else if (event.message.text === 'artifacts') {
@@ -138,6 +162,7 @@ ${getDetail.data.description}`,
         })
       }
     }
+
     //artifacts list
     else if (artifacts.some((item) => item.id === event.message.text)) {
       const { name } = artifacts.find((item) => item.id === event.message.text)
@@ -168,6 +193,7 @@ ${
 `,
       })
     }
+
     //no-text
     else {
       replyMsg({

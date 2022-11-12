@@ -1,5 +1,5 @@
 import { ICharacterDetail } from '../types/api'
-import { ICharacter } from '../types/constant'
+import { ICharacter, IWeapon } from '../types/constant'
 import { IOptionsCardAf, IOptionsCardChar } from '../types/optionsCard'
 import { colors } from './constant'
 import { capitalizeFirstLetter } from './helper'
@@ -521,106 +521,6 @@ const elements: any = {
   ],
 }
 
-const charactersPick = (data: ICharacter[]) => {
-  const mapArray = data.map((data) => {
-    const rarityArrayIcon: any[] = []
-    const rarityIcon = {
-      type: 'icon',
-      url:
-        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
-    }
-    for (let index = 0; index < data.rarity; index++) {
-      rarityArrayIcon.push(rarityIcon)
-    }
-
-    const findColors = colors.find((el) => el.element === data.elements)
-    const imgType = data.name.includes('traveler') ? 'portrait' : 'icon-big'
-
-    return {
-      type: 'bubble',
-      size: 'kilo',
-      body: {
-        type: 'box',
-        layout: 'vertical',
-        contents: [
-          {
-            type: 'image',
-            url: `https://api.genshin.dev/characters/${data.name}/${imgType}`,
-            aspectMode: 'fit',
-            aspectRatio: '2:3',
-            gravity: 'center',
-            size: 'full',
-          },
-          {
-            type: 'box',
-            layout: 'vertical',
-            contents: [],
-            position: 'absolute',
-            background: {
-              type: 'linearGradient',
-              angle: '0deg',
-              endColor: '#00000000',
-              startColor: '#00000099',
-            },
-            width: '100%',
-            height: '40%',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-          },
-          {
-            type: 'box',
-            layout: 'horizontal',
-            contents: [
-              {
-                type: 'box',
-                layout: 'vertical',
-                contents: [
-                  {
-                    type: 'box',
-                    layout: 'horizontal',
-                    contents: [
-                      {
-                        type: 'text',
-                        text: capitalizeFirstLetter(data.name),
-                        size: 'xl',
-                        color: '#ffffff',
-                      },
-                    ],
-                  },
-                  {
-                    type: 'box',
-                    layout: 'baseline',
-                    contents: rarityArrayIcon,
-                    spacing: 'xs',
-                  },
-                ],
-                spacing: 'xs',
-              },
-            ],
-            position: 'absolute',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-            paddingAll: '20px',
-          },
-        ],
-        paddingAll: '0px',
-        backgroundColor: findColors ? findColors.hex : '#ffffff',
-      },
-      action: {
-        type: 'message',
-        label: 'action',
-        text: data.name,
-      },
-    }
-  })
-  return {
-    type: 'carousel',
-    contents: mapArray,
-  }
-}
-
 const weaponsType = {
   type: 'carousel',
   contents: [
@@ -988,24 +888,123 @@ const weaponsType = {
   ],
 }
 
+const charactersPick = (data: ICharacter[]) => {
+  const mapArray = data.map((data) => {
+    const rarityArrayIcon: any[] = []
+    const rarityIcon = {
+      type: 'icon',
+      url:
+        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
+    }
+    for (let index = 0; index < data.rarity; index++) {
+      rarityArrayIcon.push(rarityIcon)
+    }
+
+    const findColors = colors.find((el) => el.element === data.elements)
+
+    return {
+      type: 'bubble',
+      size: 'micro',
+      body: {
+        type: 'box',
+        layout: 'vertical',
+        contents: [
+          {
+            type: 'image',
+            url: `https://api.genshin.dev/characters/${data.name}/card`,
+            aspectMode: 'cover',
+            aspectRatio: '2:4',
+            gravity: 'center',
+            size: 'full',
+          },
+          {
+            type: 'box',
+            layout: 'vertical',
+            contents: [],
+            position: 'absolute',
+            background: {
+              type: 'linearGradient',
+              angle: '0deg',
+              endColor: '#00000000',
+              startColor: '#00000099',
+            },
+            width: '100%',
+            height: '40%',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+          },
+          {
+            type: 'box',
+            layout: 'horizontal',
+            contents: [
+              {
+                type: 'box',
+                layout: 'vertical',
+                contents: [
+                  {
+                    type: 'box',
+                    layout: 'horizontal',
+                    contents: [
+                      {
+                        type: 'text',
+                        text: capitalizeFirstLetter(data.name),
+                        size: 'lg',
+                        color: '#ffffff',
+                      },
+                    ],
+                  },
+                  {
+                    type: 'box',
+                    layout: 'baseline',
+                    contents: rarityArrayIcon,
+                    spacing: 'xs',
+                  },
+                ],
+                spacing: 'xs',
+              },
+            ],
+            position: 'absolute',
+            offsetBottom: '0px',
+            offsetStart: '0px',
+            offsetEnd: '0px',
+            paddingAll: '20px',
+          },
+        ],
+        paddingAll: '0px',
+        backgroundColor: findColors ? findColors.hex : '#ffffff',
+      },
+      action: {
+        type: 'message',
+        label: 'action',
+        text: data.name,
+      },
+    }
+  })
+
+  return {
+    type: 'carousel',
+    contents: mapArray,
+  }
+}
+
 const charactersDetails = async (data: ICharacterDetail, urlName: string) => {
-  const findColors = colors.find(
-    (el) => el.element === data.vision.toLowerCase(),
-  )
+  const imgType = data.name.includes('traveler') ? 'portrait' : 'gacha-splash'
+  const aspectType = data.name.includes('traveler') ? 'fit' : 'cover'
 
   return {
     type: 'bubble',
-    size: 'kilo',
+    size: 'giga',
     body: {
       type: 'box',
       layout: 'vertical',
       contents: [
         {
           type: 'image',
-          url: `https://api.genshin.dev/characters/${urlName}/card`,
+          url: `https://api.genshin.dev/characters/${urlName}/${imgType}`,
           size: 'full',
-          aspectMode: 'cover',
-          aspectRatio: '2:4',
+          aspectMode: aspectType,
+          aspectRatio: '1:1',
           gravity: 'center',
         },
         {
@@ -1071,11 +1070,17 @@ const charactersDetails = async (data: ICharacterDetail, urlName: string) => {
           paddingAll: '20px',
         },
       ],
-      paddingAll: '0px',
+      paddingAll: 'xs',
+      background: {
+        type: 'linearGradient',
+        angle: '0deg',
+        startColor: '#20222B',
+        endColor: '#423032',
+      },
     },
     styles: {
       body: {
-        backgroundColor: findColors ? findColors.hex : '#ffffff',
+        backgroundColor: '#21222B',
       },
     },
   }
@@ -1131,10 +1136,30 @@ const artifactsDetails = ({ name, fullname }: IOptionsCardAf) => {
   }
 }
 
+const weaponsPick = (data: IWeapon[]) => {
+  const mapArray = data.map((data) => {
+    const rarityArrayIcon: any[] = []
+    const rarityIcon = {
+      type: 'icon',
+      url:
+        'https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png',
+    }
+    // for (let index = 0; index < data.rarity; index++) {
+    //   rarityArrayIcon.push(rarityIcon)
+    // }
+  })
+
+  return {
+    type: 'carousel',
+    contents: mapArray,
+  }
+}
+
 export {
   elements,
   weaponsType,
   charactersPick,
   charactersDetails,
   artifactsDetails,
+  weaponsPick,
 }
