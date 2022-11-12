@@ -571,7 +571,7 @@ const weaponsType = {
                     contents: [
                       {
                         type: 'text',
-                        text: 'Sword',
+                        text: 'Swords',
                         size: 'xl',
                         color: '#ffffff',
                         decoration: 'none',
@@ -1216,6 +1216,12 @@ const weaponDetail = (data: IWeapon, fullname: string) => {
           paddingAll: '20px',
         },
       ],
+      background: {
+        type: 'linearGradient',
+        angle: '0deg',
+        startColor: '#20222B',
+        endColor: '#423032',
+      },
       paddingAll: '0px',
     },
   }
