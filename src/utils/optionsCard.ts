@@ -989,8 +989,8 @@ const charactersPick = (data: ICharacter[]) => {
 }
 
 const charactersDetails = async (data: ICharacterDetail, urlName: string) => {
-  const imgType = data.name.includes('traveler') ? 'portrait' : 'gacha-splash'
-  const aspectType = data.name.includes('traveler') ? 'fit' : 'cover'
+  const imgType = urlName.includes('traveler') ? 'portrait' : 'gacha-splash'
+  const aspectType = urlName.includes('traveler') ? 'fit' : 'cover'
 
   return {
     type: 'bubble',
@@ -1148,78 +1148,75 @@ const weaponDetail = (data: IWeapon, fullname: string) => {
   }
 
   return {
-    type: 'carousel',
-    contents: {
-      type: 'bubble',
-      size: 'giga',
-      body: {
-        type: 'box',
-        layout: 'vertical',
-        contents: [
-          {
-            type: 'image',
-            url: `https://api.genshin.dev/weapons/${data.name}/icon`,
-            size: 'full',
-            aspectMode: 'cover',
-            aspectRatio: '1:1',
-            gravity: 'center',
+    type: 'bubble',
+    size: 'giga',
+    body: {
+      type: 'box',
+      layout: 'vertical',
+      contents: [
+        {
+          type: 'image',
+          url: `https://api.genshin.dev/weapons/${data.name}/icon`,
+          size: 'full',
+          aspectMode: 'cover',
+          aspectRatio: '1:1',
+          gravity: 'center',
+        },
+        {
+          type: 'box',
+          layout: 'vertical',
+          contents: [],
+          position: 'absolute',
+          background: {
+            type: 'linearGradient',
+            angle: '0deg',
+            endColor: '#00000000',
+            startColor: '#00000099',
           },
-          {
-            type: 'box',
-            layout: 'vertical',
-            contents: [],
-            position: 'absolute',
-            background: {
-              type: 'linearGradient',
-              angle: '0deg',
-              endColor: '#00000000',
-              startColor: '#00000099',
+          width: '100%',
+          height: '40%',
+          offsetBottom: '0px',
+          offsetStart: '0px',
+          offsetEnd: '0px',
+        },
+        {
+          type: 'box',
+          layout: 'horizontal',
+          contents: [
+            {
+              type: 'box',
+              layout: 'vertical',
+              contents: [
+                {
+                  type: 'box',
+                  layout: 'horizontal',
+                  contents: [
+                    {
+                      type: 'text',
+                      text: fullname,
+                      size: 'xl',
+                      color: '#ffffff',
+                    },
+                  ],
+                },
+                {
+                  type: 'box',
+                  layout: 'baseline',
+                  contents: rarityArrayIcon,
+                  spacing: 'xs',
+                },
+              ],
+              spacing: 'xs',
             },
-            width: '100%',
-            height: '40%',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-          },
-          {
-            type: 'box',
-            layout: 'horizontal',
-            contents: [
-              {
-                type: 'box',
-                layout: 'vertical',
-                contents: [
-                  {
-                    type: 'box',
-                    layout: 'horizontal',
-                    contents: [
-                      {
-                        type: 'text',
-                        text: fullname,
-                        size: 'xl',
-                        color: '#ffffff',
-                      },
-                    ],
-                  },
-                  {
-                    type: 'box',
-                    layout: 'baseline',
-                    contents: rarityArrayIcon,
-                    spacing: 'xs',
-                  },
-                ],
-                spacing: 'xs',
-              },
-            ],
-            position: 'absolute',
-            offsetBottom: '0px',
-            offsetStart: '0px',
-            offsetEnd: '0px',
-            paddingAll: '20px',
-          },
-        ],
-        paddingAll: '0px',
-      },
+          ],
+          position: 'absolute',
+          offsetBottom: '0px',
+          offsetStart: '0px',
+          offsetEnd: '0px',
+          paddingAll: '20px',
+        },
+      ],
+      paddingAll: '0px',
     },
   }
 }
