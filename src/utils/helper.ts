@@ -1,7 +1,12 @@
 import { Client } from '@line/bot-sdk'
-import { Config, Message, MiddlewareConfig } from '@line/bot-sdk/dist/types'
+import {
+  Config,
+  ImageMessage,
+  Message,
+  MiddlewareConfig,
+} from '@line/bot-sdk/dist/types'
 import dotenv from 'dotenv'
-import { IReplyFlexMsg, IReplyMsg } from '../types/helper'
+import { IReplyFlexMsg, IReplyImg, IReplyMsg } from '../types/helper'
 dotenv.config()
 
 const SECRET_TOKEN = process.env.SECRET_TOKEN!
@@ -53,14 +58,19 @@ const pushMsg = async ({ type, event, message, altText }: IReplyFlexMsg) => {
     })
 }
 
-const replyMsg = async ({ event, message, isMulti, multiMessage }: IReplyMsg) => {
+const replyMsg = async ({
+  event,
+  message,
+  isMulti,
+  multiMessage,
+}: IReplyMsg) => {
   let messagePush: Message[] = []
   if (isMulti) {
     if (multiMessage) {
       multiMessage.map((el) => {
         messagePush.push({
           type: 'text',
-          text: el
+          text: el,
         })
       })
     }
@@ -90,10 +100,36 @@ const replyMsg = async ({ event, message, isMulti, multiMessage }: IReplyMsg) =>
     })
 }
 
+const replyImg = async ({ event, src }: IReplyImg) => {
+  let messagePush: ImageMessage[] = [
+    {
+      type: 'image',
+      originalContentUrl: src,
+      previewImageUrl: src,
+    },
+  ]
+
+  client
+    .replyMessage(event.replyToken, messagePush)
+    .then(() => {
+      return {
+        status: true,
+        msg: 'success',
+      }
+    })
+    .catch((err) => {
+      return {
+        status: false,
+        msg: err.message,
+      }
+    })
+}
+
 export {
   capitalizeFirstLetter,
   pushMsg,
   replyMsg,
+  replyImg,
   randomWord,
   LINE_CONFIG,
   LINE_CONFIG_MIDDLEWARE,

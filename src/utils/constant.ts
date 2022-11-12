@@ -1111,186 +1111,220 @@ const weapons: IWeapon[] = [
   },
   {
     id: 'W100',
-    name: 'silver-sword',
-    type: 'sword',
-    rarity: 2
-  },
-  {
-    id: 'W101',
-    name: 'silver-sword',
-    type: 'sword',
-    rarity: 2
-  },
-  {
-    id: 'W102',
     name: 'skyrider-greatsword',
     type: 'claymore',
     rarity: 3
   },
   {
-    id: 'W103',
+    id: 'W101',
     name: 'skyrider-sword',
     type: 'sword',
     rarity: 3
   },
   {
-    id: 'W104',
+    id: 'W102',
     name: 'skyward-atlas',
     type: 'catalyst',
     rarity: 5
   },
   {
-    id: 'W105',
+    id: 'W103',
     name: 'skyward-blade',
     type: 'sword',
     rarity: 5
   },
   {
-    id: 'W106',
+    id: 'W104',
     name: 'skyward-harp',
     type: 'catalyst',
     rarity: 5
   },
   {
-    id: 'W107',
+    id: 'W105',
     name: 'skyward-pride',
     type: 'claymore',
     rarity: 5
   },
   {
-    id: 'W108',
+    id: 'W106',
     name: 'skyward-spine',
     type: 'polearm',
     rarity: 5
   },
   {
-    id: 'W109',
-    name: 'skyward-spine',
-    type: 'polearm',
-    rarity: 5
-  },
-  {
-    id: 'W110',
+    id: 'W107',
     name: 'slingshot',
     type: 'bow',
     rarity: 3
   },
   {
-    id: 'W111',
+    id: 'W108',
     name: 'snow-tombed-starsilver',
     type: 'claymore',
     rarity: 4
   },
   {
-    id: 'W112',
+    id: 'W109',
     name: 'solar-pearl',
     type: 'catalyst',
     rarity: 5
   },
   {
-    id: 'W113',
+    id: 'W110',
     name: 'song-of-broken-pines',
     type: 'claymore',
     rarity: 5
   },
   {
-    id: 'W114',
+    id: 'W111',
     name: 'staff-of-homa',
     type: 'polearm',
     rarity: 5
   },
   {
-    id: 'W115',
+    id: 'W112',
     name: 'summit-shaper',
     type: 'sword',
     rarity: 5
   },
   {
-    id: 'W116',
+    id: 'W113',
     name: 'sword-of-descension',
     type: 'sword',
     rarity: 4
   },
   {
-    id: 'W117',
+    id: 'W114',
     name: 'the-alley-flash',
     type: 'sword',
     rarity: 4
   },
   {
-    id: 'W118',
+    id: 'W115',
     name: 'the-bell',
     type: 'claymore',
     rarity: 4
   },
   {
-    id: 'W119',
+    id: 'W116',
     name: 'the-black-sword',
     type: 'sword',
     rarity: 4
   },
   {
-    id: 'W120',
+    id: 'W117',
     name: 'the-catch',
     type: 'polearm',
     rarity: 4
   },
   {
-    id: 'W121',
+    id: 'W118',
     name: 'the-flute',
     type: 'sword',
     rarity: 4
   },
   {
-    id: 'W122',
+    id: 'W119',
     name: 'the-stringless',
     type: 'bow',
     rarity: 4
   },
   {
-    id: 'W123',
+    id: 'W120',
     name: 'the-unforged',
     type: 'claymore',
     rarity: 5
   },
   {
-    id: 'W124',
+    id: 'W121',
     name: 'the-viridescent-hunt',
     type: 'bow',
     rarity: 4
   },
   {
-    id: 'W125',
+    id: 'W122',
     name: 'the-widsith',
     type: 'catalst',
     rarity: 4
   },
   {
-    id: 'W126',
+    id: 'W123',
     name: 'thrilling-tales-of-dragon-slayers',
     type: 'catalyst',
     rarity: 3
   },
   {
+    id: 'W124',
+    name: 'thundering-pulse',
+    type: 'bow',
+    rarity: 5
+  },
+  {
+    id: 'W125',
+    name: 'traveler-s-handy-sword',
+    type: 'sword',
+    rarity: 3
+  },
+  {
+    id: 'W126',
+    name: 'twin-nephrite',
+    type: 'catalyst',
+    rarity: 3
+  },
+  {
     id: 'W127',
-    name: 'the-black-sword',
-    type: 'sword',
+    name: 'vortex-vanquisher',
+    type: 'polearm',
+    rarity: 5
+  },
+  {
+    id: 'W128',
+    name: 'waster-greatsword',
+    type: 'claymore',
+    rarity: 1
+  },
+  {
+    id: 'W129',
+    name: `wavebreaker's-fin`,
+    type: 'polearm',
     rarity: 4
   },
   {
-    id: 'W12',
-    name: 'the-black-sword',
-    type: 'sword',
+    id: 'W130',
+    name: 'white-iron-greatsword',
+    type: 'claymore',
+    rarity: 3
+  },
+  {
+    id: 'W131',
+    name: 'white-tassel',
+    type: 'polearm',
+    rarity: 3
+  },
+  {
+    id: 'W132',
+    name: 'whiteblind',
+    type: 'claymore',
     rarity: 4
   },
   {
-    id: 'W12',
-    name: 'the-black-sword',
-    type: 'sword',
+    id: 'W133',
+    name: 'windblume-ode',
+    type: 'bow',
     rarity: 4
   },
-  
-
+  {
+    id: 'W134',
+    name: 'wine-and-song',
+    type: 'catalyst',
+    rarity: 4
+  },
+  {
+    id: 'W135',
+    name: 'wolf-s-gravestone',
+    type: 'claymore',
+    rarity: 5
+  },
 ]
 
 export {

@@ -11,30 +11,20 @@ import {
 import {
   getArtifact,
   getArtifactDetail,
-  getCharacter,
   getCharacterDetail,
+  getWeaponDetail,
 } from './services/api'
-import { randomWord, pushMsg, replyMsg } from './utils/helper'
+import { randomWord, pushMsg, replyMsg, replyImg } from './utils/helper'
 import { ICharacterDetail, IEventLine } from './types/api'
 import {
   artifactsDetails,
   charactersDetails,
   charactersPick,
   elements,
-  weaponsPick,
   weaponsType,
 } from './utils/optionsCard'
-import { ICharacter } from './types/constant'
 
-const test = async () => {
-  const payload = weapons.filter(
-    (el) => el.type === "sword",
-  )
-  
-  console.log(`เลือกอาวุธประเภท ${""} ได้เลยค่ะ`,`${payload.map((data) => {
-    return `\n ${data.id} : ${data.name}`
-  })}`)
-}
+const test = async () => {}
 
 const handleEvent = async (event: IEventLine) => {
   if (event.message.text) {
@@ -116,7 +106,7 @@ ${getDetail.data.description}`,
   ${getDetail.data.skillTalents[2].description}`,
               ],
             })
-          },2000)
+          }, 2000)
         })
       }
     }
@@ -137,25 +127,54 @@ ${getDetail.data.description}`,
 
     //weapons list
     else if (weaponConstant.includes(event.message.text)) {
-      const payload = weapons.filter(
-        (el) => el.type === event.message.text,
-      )
-
+      const payload = weapons.filter((el) => el.type === event.message.text)
       await replyMsg({
         event,
         isMulti: true,
-        multiMessage: [`เลือกอาวุธประเภท ${event.message.text} ได้เลยค่ะ`,`${payload.map((data) => {
-          return `\n ${data.id} : ${data.name}`
-        })}`],
+        multiMessage: [
+          `เลือกอาวุธประเภท ${event.message.text} ได้เลยค่ะ`,
+          `${payload.map((data) => {
+            return `${data.id} : ${data.name}\n`
+          })}`,
+        ],
       })
     }
 
     //weapons details
     else if (weapons.some((item) => item.id === event.message.text)) {
-      await replyMsg({
-        event,
-        message: "test",
+      const payload = weapons.find((data) => {
+        return data.name === event.message.text
       })
+
+      if (payload) {
+        const getWpDetail = await getWeaponDetail(payload.name)
+        if (getWpDetail && getWpDetail.data) {
+          await replyImg({
+            event,
+            src: `https://api.genshin.dev/weapons/${event.message.text}/icon`,
+          }).then(() => {
+            setTimeout(() => {
+              replyMsg({
+                event,
+                isMulti: true,
+                multiMessage: [
+                  `⚡️ รายละเอียดอาวุธ ${getWpDetail.data.name} มีดังนี้`,
+                  `📌 หมายเหตุ: รายละเอียดอาวุธจะเป็นตัวอย่างแค่ lvl 1 เท่านั้น 📌`,
+                  `⭐️ ระดับอาวุธ : ${getWpDetail.data.rarity} ดาว
+ATK พื้นฐาน : ${getWpDetail.data.baseAttack}
+Stats รอง : ${getWpDetail.data.subStat}
+
+Passive อาวุธ ${getWpDetail.data.name}
+  ชื่อ : ${getWpDetail.data.passiveName}
+  ความสามารถ : ${getWpDetail.data.passiveDesc}
+
+สามารถรับได้จาก : ${getWpDetail.data.location}`,
+                ],
+              })
+            }, 2000)
+          })
+        }
+      }
     }
 
     //artifacts

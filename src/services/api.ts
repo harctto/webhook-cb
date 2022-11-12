@@ -74,7 +74,7 @@ const getCharacterDetail = async (name: string) => {
   }
 }
 
-const getWeapon = async (data: string[]) => {
+const getWeapon = async () => {
   try {
     const res = await axios.get(`${process.env.API_URL}/weapons`)
     return {

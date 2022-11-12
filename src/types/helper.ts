@@ -15,6 +15,11 @@ export interface IReplyMsg {
     multiMessage?: string[]
 }
 
+export interface IReplyImg {
+    event: IEventLine
+    src: string
+}
+
 export interface IMessagePayload {
     type: string
     text: string

@@ -1136,7 +1136,7 @@ const artifactsDetails = ({ name, fullname }: IOptionsCardAf) => {
   }
 }
 
-const weaponsPick = (data: IWeapon[]) => {
+const weaponDetail = (data: IWeapon[]) => {
   const mapArray = data.map((data) => {
     const rarityArrayIcon: any[] = []
     const rarityIcon = {
@@ -1161,5 +1161,5 @@ export {
   charactersPick,
   charactersDetails,
   artifactsDetails,
-  weaponsPick,
+  weaponDetail,
 }
