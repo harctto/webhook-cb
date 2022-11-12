@@ -116,7 +116,7 @@ ${getDetail.data.description}`,
   ${getDetail.data.skillTalents[2].description}`,
               ],
             })
-          },1000)
+          },2000)
         })
       }
     }
@@ -130,7 +130,7 @@ ${getDetail.data.description}`,
       await pushMsg({
         type: 'flex',
         event,
-        message: weapons,
+        message: weaponsType,
         altText: 'เลือกประเภทของอาวุธได้เลยค่ะ',
       })
     }

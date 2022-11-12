@@ -1237,42 +1237,42 @@ const weapons: IWeapon[] = [
   },
   {
     id: 'W121',
-    name: 'the-black-sword',
+    name: 'the-flute',
     type: 'sword',
     rarity: 4
   },
   {
-    id: 'W12',
-    name: 'the-black-sword',
-    type: 'sword',
+    id: 'W122',
+    name: 'the-stringless',
+    type: 'bow',
     rarity: 4
   },
   {
-    id: 'W12',
-    name: 'the-black-sword',
-    type: 'sword',
+    id: 'W123',
+    name: 'the-unforged',
+    type: 'claymore',
+    rarity: 5
+  },
+  {
+    id: 'W124',
+    name: 'the-viridescent-hunt',
+    type: 'bow',
     rarity: 4
   },
   {
-    id: 'W12',
-    name: 'the-black-sword',
-    type: 'sword',
+    id: 'W125',
+    name: 'the-widsith',
+    type: 'catalst',
     rarity: 4
   },
   {
-    id: 'W12',
-    name: 'the-black-sword',
-    type: 'sword',
-    rarity: 4
+    id: 'W126',
+    name: 'thrilling-tales-of-dragon-slayers',
+    type: 'catalyst',
+    rarity: 3
   },
   {
-    id: 'W12',
-    name: 'the-black-sword',
-    type: 'sword',
-    rarity: 4
-  },
-  {
-    id: 'W12',
+    id: 'W127',
     name: 'the-black-sword',
     type: 'sword',
     rarity: 4
