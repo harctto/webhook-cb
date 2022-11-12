@@ -591,367 +591,440 @@ const weapons: IWeapon[] = [
   {
     id: 'W1',
     name: 'akuoumaru',
-    type: 'claymore'
+    type: 'claymore',
+    rarity: 4
   },
   {
     id: 'W2',
     name: 'alley-hunter',
-    type: 'bow'
+    type: 'bow',
+    rarity: 4
   },
   {
     id: 'W3',
     name: 'amber-catalyst',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 3
   },
   {
     id: 'W4',
     name: 'amenoma-kageuchi',
-    type: 'sword'
+    type: 'sword',
+    rarity: 4
   },
   {
     id: 'W5',
     name: 'amos-bow',
-    type: 'bow'
+    type: 'bow',
+    rarity: 5
   },
   {
     id: 'W6',
     name: 'apprentice-s-notes',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 1
   },
   {
     id: 'W7',
     name: 'aquila-favonia',
-    type: 'sword'
+    type: 'sword',
+    rarity: 5
   },
   {
     id: 'W8',
     name: 'beginner-s-protector',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 1
   },
   {
     id: 'W9',
     name: 'black-tassel',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 3
   },
   {
     id: 'W10',
     name: 'blackcliff-amulet',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 4
   },
   {
     id: 'W11',
     name: 'blackcliff-longsword',
-    type: 'sword'
+    type: 'sword',
+    rarity: 4
   },
   {
     id: 'W12',
     name: 'blackcliff-pole',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 4
   },
   {
     id: 'W13',
     name: 'blackcliff-slasher',
-    type: 'claymore'
+    type: 'claymore',
+    rarity: 4
   },
   {
     id: 'W14',
     name: 'blackcliff-warbow',
-    type: 'bow'
+    type: 'bow',
+    rarity: 4
   },
   {
     id: 'W15',
     name: 'bloodtainted-greatsword',
-    type: 'claymore'
+    type: 'claymore',
+    rarity: 3
   },
   {
     id: 'W16',
     name: 'calamity-queller',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 5
   },
   {
     id: 'W17',
     name: 'cinnabar -spindle',
-    type: 'sword'
+    type: 'sword',
+    rarity: 4
   },
   {
     id: 'W18',
     name: 'compound-bow',
-    type: 'bow'
+    type: 'bow',
+    rarity: 4
   },
   {
     id: 'W19',
     name: 'cool-steel',
-    type: 'sword'
+    type: 'sword',
+    rarity: 4
   },
   {
     id: 'W20',
     name: 'crescent-pike',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 4
   },
   {
     id: 'W21',
     name: 'dark-iron-sword',
-    type: 'sword'
+    type: 'sword',
+    rarity: 3
   },
   {
     id: 'W22',
     name: 'deathmatch',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 4
   },
   {
     id: 'W23',
     name: 'debate-club',
-    type: 'claymore'
+    type: 'claymore',
+    rarity: 3
   },
   {
     id: 'W24',
     name: 'dodoco-tales',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 4
   },
   {
     id: 'W25',
     name: 'dragon-s-bane',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 4
   },
   {
     id: 'W26',
     name: 'dragonspine-spear',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 4
   },
   {
     id: 'W27',
     name: 'dull-blade',
-    type: 'sword'
+    type: 'sword',
+    rarity: 1
   },
   {
     id: 'W28',
     name: 'eberlasting-moonglow',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 5
   },
   {
     id: 'W29',
     name: 'ebony-bow',
-    type: 'bow'
+    type: 'bow',
+    rarity: 3
   },
   {
     id: 'W30',
     name: 'elegy-for-the-end',
-    type: 'bow'
+    type: 'bow',
+    rarity: 5
   },
   {
     id: 'W31',
     name: 'emerald-orb',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 3
   },
   {
     id: 'W32',
     name: 'engulfing-lightning',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 5
   },
   {
     id: 'W33',
     name: 'everlasting-moonglow',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 5
   },
   {
     id: 'W34',
     name: 'eye-of-perception',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 4
   },
   {
     id: 'W35',
     name: 'ambfavonius-codex',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 4
   },
   {
     id: 'W36',
     name: 'favonius-greatsword',
-    type: 'claymore'
+    type: 'claymore',
+    rarity: 4
   },
   {
     id: 'W37',
     name: 'favonius-lance',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 4
   },
   {
     id: 'W38',
     name: 'favonius-sword',
-    type: 'sword'
+    type: 'sword',
+    rarity: 4
   },
   {
     id: 'W39',
     name: 'favonius-warbow',
-    type: 'bow'
+    type: 'bow',
+    rarity: 4
   },
   {
     id: 'W40',
     name: 'ferrous-shadow',
-    type: 'claymore'
+    type: 'claymore',
+    rarity: 3
   },
   {
     id: 'W41',
     name: 'festering-desire',
-    type: 'sword'
+    type: 'sword',
+    rarity: 4
   },
   {
     id: 'W42',
     name: 'fillet-blade',
-    type: 'sword'
+    type: 'sword',
+    rarity: 3
   },
   {
     id: 'W43',
     name: 'freedom-sworn',
-    type: 'sword'
+    type: 'sword',
+    rarity: 5
   },
   {
     id: 'W44',
     name: 'frostbearer',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 4
   },
   {
     id: 'W45',
     name: 'hakushin-ring',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 4
   },
   {
     id: 'W46',
     name: 'halberd',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 4
   },
   {
     id: 'W47',
     name: 'hamayumi',
-    type: 'bow'
+    type: 'bow',
+    rarity: 4
   },
   {
     id: 'W48',
     name: 'haran-geppaku-futsu',
-    type: 'sword'
+    type: 'sword',
+    rarity: 5
   },
   {
     id: 'W49',
     name: 'harbinger-of-dawn',
-    type: 'sword'
+    type: 'sword',
+    rarity: 3
   },
   {
     id: 'W50',
     name: 'hunter-s-bow',
-    type: 'bow'
+    type: 'bow',
+    rarity: 1
   },
   {
     id: 'W51',
     name: 'iron-point',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 2
   },
   {
     id: 'W52',
     name: 'iron-sting',
-    type: 'sword'
+    type: 'sword',
+    rarity: 4
   },
   {
     id: 'W53',
     name: `kagura's-verity`,
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 5
   },
   {
     id: 'W54',
     name: 'katsuragikiri-nagamasa',
-    type: 'claymore'
+    type: 'claymore',
+    rarity: 4
   },
   {
     id: 'W55',
     name: 'kitain-cross-spear',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 4
   },
   {
     id: 'W56',
     name: 'lion-s-roar',
-    type: 'sword'
+    type: 'sword',
+    rarity: 4
   },
   {
     id: 'W57',
     name: 'lithic-blade',
-    type: 'claymore'
+    type: 'claymore',
+    rarity: 4
   },
   {
     id: 'W58',
     name: 'lithic-spear',
-    type: 'polearm'
+    type: 'polearm',
+    rarity: 4
   },
   {
     id: 'W59',
     name: 'lost-prayer-to-the-sacred-winds',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 5
   },
   {
     id: 'W60',
     name: 'luxurious-sea-lord',
-    type: 'claymore'
+    type: 'claymore',
+    rarity: 4
   },
   {
     id: 'W61',
     name: 'magic-guide',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 3
   },
   {
     id: 'W62',
     name: 'mappa-mare',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 4
   },
   {
     id: 'W63',
     name: 'memory-of-dust',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 5
   },
   {
     id: 'W64',
     name: 'messenger',
-    type: 'Bow'
+    type: 'Bow',
+    rarity: 3
   },
   {
     id: 'W65',
     name: 'mistsplitter-reforged',
-    type: 'sword'
+    type: 'sword',
+    rarity: 5
   },
   {
     id: 'W66',
     name: 'mitternachts-waltz',
-    type: 'bow'
+    type: 'bow',
+    rarity: 4
   },
   {
     id: 'W67',
     name: `mouun's-moon`,
-    type: 'bow'
+    type: 'bow',
+    rarity: 4
   },
   {
     id: 'W68',
     name: 'oathsworn-eye',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 4
   },
   {
     id: 'W69',
     name: 'old-merc-s-pal',
-    type: 'claymore'
+    type: 'claymore',
+    rarity: 2
   },
   {
     id: 'W70',
     name: 'otherworldly-story',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 3
   },
   {
     id: 'W71',
     name: 'pocket-grimoire',
-    type: 'catalyst'
+    type: 'catalyst',
+    rarity: 2
   },
   {
     id: 'W72',
     name: 'polar-star',
-    type: 'bow'
+    type: 'bow',
+    rarity: 5
   },
   {
     id: 'W73',
     name: 'predator',
-    type: 'bow'
+    type: 'bow',
+    rarity: 4
   },
   {
     id: 'W74',

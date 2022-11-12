@@ -21,6 +21,7 @@ import {
   charactersDetails,
   charactersPick,
   elements,
+  weaponDetail,
   weaponsType,
 } from './utils/optionsCard'
 
@@ -139,7 +140,7 @@ ${getDetail.data.description}`,
     }
 
     //weapons details
-    else if (weapons.some((item) => item.id === event.message.text)) {
+    else if (weapons.some((item) => item.id === event.message.text.toUpperCase())) {
       const payload = weapons.find((data) => {
         return data.id === event.message.text
       })
@@ -147,9 +148,11 @@ ${getDetail.data.description}`,
       if (payload) {
         const getWpDetail = await getWeaponDetail(payload.name)
         if (getWpDetail && getWpDetail.data) {
-          await replyImg({
+          await pushMsg({
+            type: 'flex',
             event,
-            src: `https://api.genshin.dev/weapons/${event.message.text}/icon`,
+            message: weaponDetail(payload, getWpDetail.data.name),
+            altText: getWpDetail.data.name
           }).then(() => {
             setTimeout(() => {
               replyMsg({
@@ -187,7 +190,7 @@ ${getDetail.data.description}`,
     }
 
     //artifacts list
-    else if (artifacts.some((item) => item.id === event.message.text)) {
+    else if (artifacts.some((item) => item.id === event.message.text.toUpperCase())) {
       const { name } = artifacts.find((item) => item.id === event.message.text)
       const { data } = await getArtifactDetail(name)
       const getDetail = artifactsDetails({ name: name, fullname: data.name })

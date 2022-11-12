@@ -14,5 +14,5 @@ export interface IWeapon {
     id: string
     name: string
     type: string
-    rarity? : number
+    rarity : number
 }
