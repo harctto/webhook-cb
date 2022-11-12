@@ -24,8 +24,6 @@ import {
   weaponsType,
 } from './utils/optionsCard'
 
-const test = async () => {}
-
 const handleEvent = async (event: IEventLine) => {
   if (event.message.text) {
     //greeting
@@ -115,13 +113,13 @@ ${getDetail.data.description}`,
     else if (event.message.text === 'weapons') {
       await replyMsg({
         event,
-        message: 'เลือกประเภทของอาวุธได้เลยค่ะ',
+        message: 'เลือกประเภทของอาวุธได้เลยค่ะ 💁🏻‍♀️⚔️',
       })
       await pushMsg({
         type: 'flex',
         event,
         message: weaponsType,
-        altText: 'เลือกประเภทของอาวุธได้เลยค่ะ',
+        altText: 'เลือกประเภทของอาวุธได้เลยค่ะ 💁🏻‍♀️⚔️',
       })
     }
 
@@ -132,9 +130,9 @@ ${getDetail.data.description}`,
         event,
         isMulti: true,
         multiMessage: [
-          `เลือกอาวุธประเภท ${event.message.text} ได้เลยค่ะ`,
+          `เลือกอาวุธ ${event.message.text} ที่ต้องการได้เลยค่ะ 😊👇🏻`,
           `${payload.map((data) => {
-            return `${data.id} : ${data.name}\n`
+            return `\n${data.id} : ${data.name}`
           })}`,
         ],
       })
@@ -143,7 +141,7 @@ ${getDetail.data.description}`,
     //weapons details
     else if (weapons.some((item) => item.id === event.message.text)) {
       const payload = weapons.find((data) => {
-        return data.name === event.message.text
+        return data.id === event.message.text
       })
 
       if (payload) {
@@ -161,10 +159,10 @@ ${getDetail.data.description}`,
                   `⚡️ รายละเอียดอาวุธ ${getWpDetail.data.name} มีดังนี้`,
                   `📌 หมายเหตุ: รายละเอียดอาวุธจะเป็นตัวอย่างแค่ lvl 1 เท่านั้น 📌`,
                   `⭐️ ระดับอาวุธ : ${getWpDetail.data.rarity} ดาว
-ATK พื้นฐาน : ${getWpDetail.data.baseAttack}
-Stats รอง : ${getWpDetail.data.subStat}
+☀️ ATK พื้นฐาน : ${getWpDetail.data.baseAttack}
+🌙 Stats รอง : ${getWpDetail.data.subStat}
 
-Passive อาวุธ ${getWpDetail.data.name}
+🌟 Passive อาวุธ ${getWpDetail.data.name}
   ชื่อ : ${getWpDetail.data.passiveName}
   ความสามารถ : ${getWpDetail.data.passiveDesc}
 
@@ -229,4 +227,4 @@ ${
   }
 }
 
-export { handleEvent, test }
+export { handleEvent }

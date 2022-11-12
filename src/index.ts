@@ -4,17 +4,15 @@ import { middleware } from '@line/bot-sdk'
 import {
   LINE_CONFIG_MIDDLEWARE,
 } from './utils/helper'
-import { handleEvent, test } from './handleEvent'
+import { handleEvent } from './handleEvent'
 
 dotenv.config()
 
 const app: Express = express()
 const port = process.env.PORT
 
-test()
-
 app.get('/', (req: Request, res: Response) => {
-  res.send('Chatbot Webhook Server')
+  res.send('<image src="https://qr-official.line.me/sid/L/184sqnjh.png" alt="qrCode"/>')
 })
 
 app.post(

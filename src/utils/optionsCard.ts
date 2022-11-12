@@ -90,7 +90,7 @@ const elements: any = {
         contents: [
           {
             type: 'image',
-            url: 'https://api.genshin.dev/elements/cryo./icon',
+            url: 'https://api.genshin.dev/elements/cryo/icon',
             size: 'full',
             aspectMode: 'cover',
             aspectRatio: '1:1',

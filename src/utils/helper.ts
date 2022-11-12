@@ -109,6 +109,8 @@ const replyImg = async ({ event, src }: IReplyImg) => {
     },
   ]
 
+  client.pushMessage
+
   client
     .replyMessage(event.replyToken, messagePush)
     .then(() => {
